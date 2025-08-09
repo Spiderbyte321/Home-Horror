@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Material// This class is used to store what type of material the player gets and how much
+public class Material// This class is used to store what type of material the player gets and how much on an object
 {
     private string MaterialName;
     
