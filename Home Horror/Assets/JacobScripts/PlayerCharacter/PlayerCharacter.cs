@@ -8,6 +8,7 @@ public class PlayerCharacter : MonoBehaviour
     [SerializeField] private int currentSanity = 90;
     [SerializeField] private int maxHealth = 100;
     [SerializeField] private int currentHealth = 90;
+    [SerializeField] private int SanityThreshold=40;
     private int MoneyOwned = 0;
     private Dictionary<string, int> PlayerMaterials = new Dictionary<string, int>();
 
@@ -27,7 +28,7 @@ public class PlayerCharacter : MonoBehaviour
     private void OnEnable()
     {
         //Subscribe to event to heal
-        //Sub to indrease material and money
+        //Sub to increase material and money
     }
 
     private void OnDisable()
@@ -66,11 +67,11 @@ public class PlayerCharacter : MonoBehaviour
         OnHealthAction?.Invoke(currentHealth);
     }
 
-    public void TakeSanityDamage(int ADamage)
+    public void TakeSanityDamage(int ADamage)//Update to support more complex behaviour
     {
         currentSanity -= ADamage;
 
-        if (currentSanity < 40)
+        if (currentSanity < SanityThreshold)
         {
             OnSanityAction?.Invoke();
         }
