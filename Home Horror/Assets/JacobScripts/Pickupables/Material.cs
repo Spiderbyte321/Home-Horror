@@ -13,7 +13,7 @@ public class Material// This class is used to store what type of material the pl
 
     public Material(string AMaterialName, int AMaterialAmount)
     {
-        MaterialName = AMaterialName;
+        MaterialName = AMaterialName.ToLower();
         MaterialAmount = AMaterialAmount;
     }
 }
