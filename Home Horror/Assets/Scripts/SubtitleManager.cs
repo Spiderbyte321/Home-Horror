@@ -4,8 +4,9 @@ using System.Collections;
 using System.Collections.Generic;
 
 [System.Serializable]
-public class SubtitleLine
+public class SubtitleEntry
 {
+    public string soundName; 
     public AudioClip audioClip;
     [TextArea] public string subtitleText;
 }
@@ -20,15 +21,32 @@ public class SubtitleManager : MonoBehaviour
     public AudioSource audioSource;
 
     [Header("Subtitles")]
-    public List<SubtitleLine> subtitleLines = new List<SubtitleLine>();
+    public List<SubtitleEntry> subtitleEntries = new List<SubtitleEntry>();
 
 
+    private Dictionary<string, SubtitleEntry> subtitleDictionary = new Dictionary<string, SubtitleEntry>();
 
     void Start()
     {
         subtitleDisplay.text = "";
         if (subtitlePanel != null)
-            subtitlePanel.SetActive(false); 
+            subtitlePanel.SetActive(false);
+
+
+        foreach (var entry in subtitleEntries)
+        {
+            if (!string.IsNullOrEmpty(entry.soundName) && entry.audioClip != null)
+            {
+                if (!subtitleDictionary.ContainsKey(entry.soundName))
+                {
+                    subtitleDictionary.Add(entry.soundName, entry);
+                }
+                else
+                {
+                    Debug.LogWarning($"Duplicate fileName key detected: {entry.soundName}");
+                }
+            }
+        }
     }
 
     void Update()
@@ -41,24 +59,38 @@ public class SubtitleManager : MonoBehaviour
 
     void PlayRandomSubtitle()
     {
-        if (subtitleLines.Count == 0) return;
+        if (subtitleDictionary.Count == 0) return;
 
-        int randomIndex = Random.Range(0, subtitleLines.Count);
-        StopAllCoroutines();
-        StartCoroutine(ShowSubtitle(subtitleLines[randomIndex]));
+        List<string> keys = new List<string>(subtitleDictionary.Keys);
+        string randomKey = keys[Random.Range(0, keys.Count)];
+
+        PlaySubtitle(randomKey);
     }
 
-    IEnumerator ShowSubtitle(SubtitleLine line)
+    public void PlaySubtitle(string fileName)
+    {
+        if (subtitleDictionary.TryGetValue(fileName, out SubtitleEntry entry))
+        {
+            StopAllCoroutines();
+            StartCoroutine(ShowSubtitle(entry));
+        }
+        else
+        {
+            Debug.LogWarning($"Subtitle with fileName '{fileName}' not found!");
+        }
+    }
+
+    IEnumerator ShowSubtitle(SubtitleEntry entry)
     {
         if (subtitlePanel != null)
             subtitlePanel.SetActive(true);
 
-        audioSource.clip = line.audioClip;
+        audioSource.clip = entry.audioClip;
         audioSource.Play();
 
-        subtitleDisplay.text = line.subtitleText;
+        subtitleDisplay.text = entry.subtitleText;
 
-        yield return new WaitForSeconds(line.audioClip.length);
+        yield return new WaitForSeconds(entry.audioClip.length);
 
         subtitleDisplay.text = "";
         if (subtitlePanel != null)

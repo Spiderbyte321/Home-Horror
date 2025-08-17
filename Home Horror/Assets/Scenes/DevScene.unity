@@ -756,15 +756,16 @@ MonoBehaviour:
   subtitlePanel: {fileID: 1356899354}
   triggerKey: 101
   audioSource: {fileID: 236212648}
-  subtitleLines:
-  - audioClip: {fileID: 8300000, guid: 01cc65d70be6ed44ba53ada966821310, type: 3}
-    subtitleText: Oh god....
-  - audioClip: {fileID: 8300000, guid: fbe6c383aa3b9244a9319e886306a613, type: 3}
-    subtitleText: Ah shit....
-  - audioClip: {fileID: 8300000, guid: 55da83c4cac6ab2459316c662e4930ec, type: 3}
-    subtitleText: Hm, nice to see you Paul.
-  - audioClip: {fileID: 8300000, guid: db89660622339aa479b24055e2c45aa1, type: 3}
+  subtitleEntries:
+  - soundName: whatThe
+    audioClip: {fileID: 8300000, guid: db89660622339aa479b24055e2c45aa1, type: 3}
     subtitleText: W-what the?!
+  - soundName: Paul
+    audioClip: {fileID: 8300000, guid: 55da83c4cac6ab2459316c662e4930ec, type: 3}
+    subtitleText: Hm, nice to see you Paul.
+  - soundName: notBad
+    audioClip: {fileID: 8300000, guid: 9e7c4b4647222e744a4fb06f5cc9b785, type: 3}
+    subtitleText: Not bad, not bad.
 --- !u!1 &974813568
 GameObject:
   m_ObjectHideFlags: 0
