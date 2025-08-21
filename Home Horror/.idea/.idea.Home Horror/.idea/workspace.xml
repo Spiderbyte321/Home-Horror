@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa562036-4b02-4f56-9fd0-665b7258a8bc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/JacobScripts/Pickupables/Interactable.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/JacobScripts/Pickupables/Interactable.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Home Horror/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Home Horror/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JacobScripts/PlayerCharacter/Material.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JacobScripts/PlayerCharacter/Material.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JacobScripts/PlayerCharacter/MaterialController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JacobScripts/PlayerCharacter/MaterialController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JacobScripts/RepairsSpaces/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JacobScripts/RepairsSpaces/GameController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DevScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DevScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +33,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "origin/Jacob",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -107,7 +99,7 @@
       <workItem from="1754731630915" duration="5229000" />
       <workItem from="1754815593363" duration="554000" />
       <workItem from="1754835064075" duration="590000" />
-      <workItem from="1755416869148" duration="1480000" />
+      <workItem from="1755416869148" duration="3488000" />
     </task>
     <servers />
   </component>
