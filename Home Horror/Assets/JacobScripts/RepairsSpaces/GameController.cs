@@ -1,17 +1,25 @@
+using System;
+using JacobScripts.Pickupables;
 using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
+    [SerializeField]
 
     public delegate void UpdateRepairablesAction();
 
     public static event UpdateRepairablesAction OnUpdateRepairables;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+
+    private void OnEnable()
     {
-        
+        MaterialController.MaterialInteraction += Proof;
     }
-    
+
+    private void OnDisable()
+    {
+        MaterialController.MaterialInteraction -= Proof;
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
@@ -19,4 +27,10 @@ public class GameController : MonoBehaviour
             OnUpdateRepairables?.Invoke();
         }
     }
+
+    private void Proof(Material AMaterial)
+    {
+        Debug.Log("Material Components:"+AMaterial.Name+"\n"+AMaterial.Amount);
+    }
+    
 }
