@@ -29,12 +29,16 @@ public class PlayerCharacter : MonoBehaviour
     {
         //Subscribe to event to heal
         //Sub to increase material and money
+
+        GameController.OnUpdatePickups += GainMaterials;
     }
 
     private void OnDisable()
     {
         //unsub
         //unsub
+
+        GameController.OnUpdatePickups -= GainMaterials;
     }
     
 
@@ -84,6 +88,7 @@ public class PlayerCharacter : MonoBehaviour
 
     private void GainMaterials(Material AMaterial)
     {
+        Debug.Log("works");
         if(!PlayerMaterials.TryAdd(AMaterial.Name, AMaterial.Amount))
         {
             PlayerMaterials[AMaterial.Name] += AMaterial.Amount;

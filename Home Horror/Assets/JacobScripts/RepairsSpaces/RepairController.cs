@@ -1,11 +1,14 @@
 using System;
+using JacobScripts.Pickupables;
+using TMPro;
 using UnityEngine;
 
-public class RepairController : MonoBehaviour//component that the state machine lives on
+public class RepairController : MonoBehaviour,Interactable//component that the state machine lives on
 {
 
     [SerializeField] private MeshFilter Filter;
     [SerializeField]private Mesh[] Meshes;
+    [SerializeField] private TextMeshPro Prompt;
     private int dollarCost = 0;
     private int materialCost = 0;
      private ParentState CurrentState;
@@ -62,5 +65,18 @@ public class RepairController : MonoBehaviour//component that the state machine 
         materialCost = CurrentState.MaterialCost;
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        Prompt.gameObject.SetActive(true);
+    }
 
+    private void OnTriggerExit(Collider other)
+    {
+        Prompt.gameObject.SetActive(false);
+    }
+
+    public void Interact()
+    {
+        Repair();
+    }
 }
