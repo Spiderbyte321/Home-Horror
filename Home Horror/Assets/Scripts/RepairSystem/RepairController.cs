@@ -1,9 +1,8 @@
 using System;
-using JacobScripts.Pickupables;
 using TMPro;
 using UnityEngine;
 
-public class RepairController : MonoBehaviour,Interactable//component that the state machine lives on
+public class RepairController : Interactable//component that the state machine lives on
 {
 
     [SerializeField] private MeshFilter Filter;
@@ -16,9 +15,6 @@ public class RepairController : MonoBehaviour,Interactable//component that the s
     public int DollarCost => dollarCost;
     public int MaterialCost => materialCost;
     
-   
-
-
     private void OnEnable()//Just for showing it works not using events in final game
     {
         GameController.OnUpdateRepairables += ProgressStates;
@@ -28,8 +24,6 @@ public class RepairController : MonoBehaviour,Interactable//component that the s
     {
         GameController.OnUpdateRepairables -= ProgressStates;
     }
-
-    
 
     private void ProgressStates()// want to rework to follow the open closed principal
     {// raaaaaaaghhhh!
@@ -75,7 +69,7 @@ public class RepairController : MonoBehaviour,Interactable//component that the s
         Prompt.gameObject.SetActive(false);
     }
 
-    public void Interact()
+    public override void Interact()
     {
         Repair();
     }

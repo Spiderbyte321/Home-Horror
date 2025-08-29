@@ -5,7 +5,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa562036-4b02-4f56-9fd0-665b7258a8bc" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Home Horror/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Home Horror/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Home Horror/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Home Horror/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InputSystem_Actions.inputactions" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InputSystem_Actions.inputactions.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JacobScripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JacobScripts/Pickupables.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JacobScripts/Pickupables/Interactable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JacobScripts/Pickupables/Interactable.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JacobScripts/Pickupables/Material.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JacobScripts/Pickupables/Material.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JacobScripts/Pickupables/MaterialController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JacobScripts/Pickupables/MaterialController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JacobScripts/PlayerCharacter.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JacobScripts/PlayerCharacter/PlayerCharacter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JacobScripts/PlayerCharacter/PlayerCharacter.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JacobScripts/RepairsSpaces.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JacobScripts/RepairsSpaces/BrokenState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JacobScripts/RepairsSpaces/BrokenState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JacobScripts/RepairsSpaces/DentedState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JacobScripts/RepairsSpaces/DentedState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JacobScripts/RepairsSpaces/GameController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JacobScripts/RepairsSpaces/GameController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JacobScripts/RepairsSpaces/ParentState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JacobScripts/RepairsSpaces/ParentState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JacobScripts/RepairsSpaces/RepairController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JacobScripts/RepairsSpaces/RepairController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JacobScripts/RepairsSpaces/RepairedState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JacobScripts/RepairsSpaces/RepairedState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/JDevScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/JDevScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SubtitleManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SubtitleManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SumenScripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SumenScripts/PlayerController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SumenScripts/PlayerController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SumenScripts/PlayerMovement.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SumenScripts/PlayerMovement.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,27 +63,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "origin/Jacob",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
-  },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\jacde\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
-      "C:\\Users\\jacde\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
-      "C:\\Users\\jacde\\AppData\\Local\\Symbols\\src"
-    ]
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Lirisa&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.0.38f1\Editor\Unity.exe" />
@@ -71,6 +101,9 @@
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <option name="projectPathOnTarget" />
+      <option name="runtimes">
+        <list />
+      </option>
       <option name="selectedOptions">
         <list />
       </option>
@@ -81,6 +114,9 @@
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <option name="projectPathOnTarget" />
+      <option name="runtimes">
+        <list />
+      </option>
       <option name="selectedOptions">
         <list />
       </option>
@@ -100,6 +136,8 @@
       <workItem from="1754815593363" duration="554000" />
       <workItem from="1754835064075" duration="590000" />
       <workItem from="1755416869148" duration="3488000" />
+      <workItem from="1756456912792" duration="7434000" />
+      <workItem from="1756467925323" duration="10189000" />
     </task>
     <servers />
   </component>
@@ -107,6 +145,11 @@
     <option name="version" value="3" />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityProjectDiscoverer">
+    <option name="hasUnityReference" value="true" />
+    <option name="unityProject" value="true" />
+    <option name="unityProjectFolder" value="true" />
+  </component>
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

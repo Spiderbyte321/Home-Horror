@@ -1,10 +1,9 @@
 using System;
 using System.Transactions;
-using JacobScripts.Pickupables;
 using TMPro;
 using UnityEngine;
 
-public class MaterialController : MonoBehaviour,Interactable//component on the object in the scene
+public class MaterialController : Interactable //component on the object in the scene
 {
   [SerializeField] private int MaterialAmount;
   [SerializeField] private string MaterialType;
@@ -42,9 +41,8 @@ public class MaterialController : MonoBehaviour,Interactable//component on the o
     Prompt.gameObject.SetActive(false);
   }
 
-  public void Interact()//assumes the playercontroller will get it through interaction to broadcast
+  public override void Interact()//assumes the playercontroller will get it through interaction to broadcast
   {
     MaterialInteraction?.Invoke(Material);
   }
-  
 }

@@ -1,11 +1,9 @@
 using System;
-using JacobScripts.Pickupables;
 using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
     [SerializeField]
-
     public delegate void UpdateRepairablesAction();
 
     public static event UpdateRepairablesAction OnUpdateRepairables;
