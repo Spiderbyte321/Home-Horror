@@ -6,18 +6,76 @@
   <component name="ChangeListManager">
     <list default="true" id="aa562036-4b02-4f56-9fd0-665b7258a8bc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Home Horror/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Home Horror/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/CBINewsHousing.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/CBINewsHousing.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/CBINewsTrafficOnM4.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/CBINewsTrafficOnM4.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/CBINewsWeather.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/CBINewsWeather.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/CBINewsWorldwideSongs.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/CBINewsWorldwideSongs.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/PaulEasterEgg.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/PaulEasterEgg.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/TitleMusic.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/TitleMusic.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/ambientMusic.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/ambientMusic.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/anotherDayDone.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/anotherDayDone.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/badSituation.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/badSituation.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/hurt.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/hurt.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/justTired.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/justTired.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/notBad.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/notBad.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/pickUpResource.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/pickUpResource.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/sanityBar.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/sanityBar.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/smellsAwful.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/smellsAwful.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/thisWasUnder.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/thisWasUnder.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/useDrinkBuff.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/useDrinkBuff.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/waitIsThereEven.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/waitIsThereEven.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/wasntThereBefore.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/wasntThereBefore.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/whatThe.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/whatThe.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/whatwasThat.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/whatwasThat.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/whoBuilt.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/whoBuilt.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Input/PlayerControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input/PlayerControls.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Input/PlayerControls.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input/PlayerControls.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Pickupables.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Pickupables.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Repairable.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Repairable.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DevScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DevScene.unity.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameplayScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameplayScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/JDevScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/JDevScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/JDevScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/JDevScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/ElectricalFault/FlickeringLights.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/ElectricalFault/FlickeringLights.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/ElectricalFault/FullBlackout.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/ElectricalFault/FullBlackout.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/ElectricalFault/RandomBlackouts.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/ElectricalFault/RandomBlackouts.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DegradationSystem/DegradationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DegradationSystem/DegradationController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DegradationSystem/ProblemStageSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DegradationSystem/ProblemStageSO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Misc/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Misc/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pickups/Material.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pickups/Material.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pickups/MaterialController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pickups/MaterialController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RepairSystem/BrokenState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RepairSystem/BrokenState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RepairSystem/DentedState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RepairSystem/DentedState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerCharacter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerCharacter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerInput.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/RepairSystem/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RepairSystem/GameController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RepairSystem/ParentState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RepairSystem/ParentState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RepairSystem/RepairController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RepairSystem/RepairController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RepairSystem/RepairedState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RepairSystem/RepairedState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SubtitleManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/SubtitleManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/DefaultVolumeProfile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/DefaultVolumeProfile.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +173,7 @@
       <workItem from="1755416869148" duration="3488000" />
       <workItem from="1756456912792" duration="7434000" />
       <workItem from="1756467925323" duration="22461000" />
-      <workItem from="1756537001163" duration="6917000" />
+      <workItem from="1756537001163" duration="28508000" />
     </task>
     <servers />
   </component>
@@ -129,6 +187,17 @@
     <option name="unityProjectFolder" value="true" />
   </component>
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>

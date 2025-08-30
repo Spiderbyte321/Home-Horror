@@ -6,16 +6,14 @@ public class PlayerCharacter : MonoBehaviour
 {
     [SerializeField] private int maxSanity = 100;
     [SerializeField] private int currentSanity = 90;
+    [SerializeField] private int sanityThreshold = 40;
+    
     [SerializeField] private int maxHealth = 100;
     [SerializeField] private int currentHealth = 90;
-    [SerializeField] private int SanityThreshold=40;
-    private int MoneyOwned = 0;
-    private Dictionary<string, int> PlayerMaterials = new Dictionary<string, int>();
 
     public int CurrentSanity => currentSanity;
     public int CurrentHealth => currentHealth;
-
-
+    
     public delegate void SanityStatusAction();
 
     public static event SanityStatusAction OnSanityAction;
@@ -29,16 +27,12 @@ public class PlayerCharacter : MonoBehaviour
     {
         //Subscribe to event to heal
         //Sub to increase material and money
-
-        GameController.OnUpdatePickups += GainMaterials;
     }
 
     private void OnDisable()
     {
         //unsub
         //unsub
-
-        GameController.OnUpdatePickups -= GainMaterials;
     }
     
 
@@ -71,27 +65,13 @@ public class PlayerCharacter : MonoBehaviour
         OnHealthAction?.Invoke(currentHealth);
     }
 
-    public void TakeSanityDamage(int ADamage)//Update to support more complex behaviour
+    public void TakeSanityDamage(int ADamage) // Update to support more complex behaviour
     {
         currentSanity -= ADamage;
 
-        if (currentSanity < SanityThreshold)
+        if (currentSanity < sanityThreshold)
         {
             OnSanityAction?.Invoke();
-        }
-    }
-
-    private void IncreaseMoney(int AAmount)
-    {
-        MoneyOwned += AAmount;
-    }
-
-    private void GainMaterials(Material AMaterial)
-    {
-        Debug.Log("works");
-        if(!PlayerMaterials.TryAdd(AMaterial.Name, AMaterial.Amount))
-        {
-            PlayerMaterials[AMaterial.Name] += AMaterial.Amount;
         }
     }
 }

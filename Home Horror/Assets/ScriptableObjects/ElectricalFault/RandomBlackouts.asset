@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c4bd396397b6a445bb35268342826db, type: 3}
   m_Name: RandomBlackouts
   m_EditorClassIdentifier: 
-  moneyCost: 0
-  materialCost: 0
+  moneyCost: 10
+  materialType: Doom
+  materialAmount: 5

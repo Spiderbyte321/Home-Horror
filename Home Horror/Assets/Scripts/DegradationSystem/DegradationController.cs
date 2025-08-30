@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DegradationController : MonoBehaviour
+public class DegradationController : Interactable
 {
     public List<ProblemStageSO> stageData;
 
@@ -10,6 +10,17 @@ public class DegradationController : MonoBehaviour
     private bool repairedToday = false;
     
     private ProblemStageSO currentStage;
+    
+    public ProblemStageSO CurrentStage => currentStage;
+    
+    public enum RepairMethod { Money, Material }
+    
+    private GameUI gameUI;
+
+    public void Start()
+    {
+        gameUI = FindFirstObjectByType<GameUI>();
+    }
     
     public void StartProblem()
     {
@@ -35,25 +46,44 @@ public class DegradationController : MonoBehaviour
         repairedToday = false;
     }
 
-    /* public void RepairSystem(PlayerInventory inventory)
+    public bool TryRepairSystem(PlayerInventory inventory, RepairMethod method)
     {
-        if (currentStage == null) return;
+        if (currentStage == null)
+            return false;
 
-        if (inventory.Money >= currentStage.moneyCost || inventory.Materials >= currentStage.materialCost)
+        switch (method)
         {
-            inventory.Money -= currentStage.moneyCost;
-            inventory.Materials -= currentStage.materialCost;
-            
-            currentStage.Exit();
-            
-            currentStage == null;
-            repairedToday = true;
+            case RepairMethod.Money:
+                if (inventory.Money >= currentStage.moneyCost)
+                {
+                    inventory.SpendMoney(currentStage.moneyCost);
+                    Interact();
+                    return true;
+                }
+                break;
+
+            case RepairMethod.Material:
+                if (inventory.HasMaterial(currentStage.materialType, currentStage.materialAmount))
+                {
+                    inventory.UseMaterial(currentStage.materialType, currentStage.materialAmount);
+                    Interact();
+                    return true;
+                }
+                break;
         }
-        else
-        {
-            Debug.Log("Not enough money");
-        }
-    } */
+
+        Debug.Log("Not enough resources to repair with selected method.");
+        return false;
+    }
+
+    public override void Interact()
+    {
+        currentStage.Exit();
+        currentStage = null;
+        currentStageIndex = 0;
+        gameUI.HideRepairInfoPopup();
+        repairedToday = true;
+    }
 
     private void SetStage(int index)
     {

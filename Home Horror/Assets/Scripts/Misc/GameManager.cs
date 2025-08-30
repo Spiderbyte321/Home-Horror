@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
@@ -15,9 +14,20 @@ public class GameManager : MonoBehaviour
     public float maxProblemDelay = 20f;
 
     private Coroutine dailyProblemRoutine;
+    
+    [Header("Economy")]
+    public int dailyMoneyReward = 100;
+    
+    [Header("Win Condition")]
+    public int moneyGoal = 1000;
+
+    private bool gameEnded = false;
+    
+    private GameUI gameUI;
 
     private void Start()
     {
+        gameUI = FindFirstObjectByType<GameUI>();
         StartNewDay();
     }
 
@@ -41,6 +51,21 @@ public class GameManager : MonoBehaviour
 
     private void StartNewDay()
     {
+        if (gameEnded) return;
+        
+        // Give player money
+        PlayerInventory inventory = FindFirstObjectByType<PlayerInventory>();
+        if (inventory != null)
+        {
+            inventory.AddMoney(dailyMoneyReward);
+            
+            if (inventory.Money >= moneyGoal)
+            {
+                EndGame();
+                return;
+            }
+        }
+        
         dailyProblemRoutine = StartCoroutine(RandomProblemRoutine());
     }
 
@@ -61,5 +86,13 @@ public class GameManager : MonoBehaviour
 
             system.StartProblem();
         }
+    }
+    
+    private void EndGame()
+    {
+        gameEnded = true;
+        Debug.Log("You reached your savings goal! The game has ended.");
+        
+        gameUI.ShowWinScreen();
     }
 }

@@ -3,17 +3,12 @@ using UnityEngine;
 // This class is used to store what type of material the player gets and how much on an object
 public class Material
 {
-    private string MaterialName;
-    
-    private int MaterialAmount;
+    public string Name { get; private set; }
+    public int Amount { get; private set; }
 
-    public string Name => MaterialName;
-
-    public int Amount => MaterialAmount;
-    
-    public Material(string AMaterialName, int AMaterialAmount)
+    public Material(string name, int amount)
     {
-        MaterialName = AMaterialName.ToLower();
-        MaterialAmount = AMaterialAmount;
+        Name = name.ToLower();
+        Amount = amount;
     }
 }

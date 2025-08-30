@@ -5,7 +5,8 @@ using UnityEngine;
 public class ProblemStageSO : ScriptableObject
 {
     public int moneyCost;
-    public int materialCost;
+    public string materialType;
+    public int materialAmount;
 
     public event Action OnEnterStage;
     public event Action OnExitStage;

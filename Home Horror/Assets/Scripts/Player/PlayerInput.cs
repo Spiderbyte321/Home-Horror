@@ -14,6 +14,10 @@ public class PlayerInput : MonoBehaviour, PlayerControls.IPlayerLocomotionMapAct
     public bool JumpPressed { get; private set; }
     
     public bool InteractPressed { get; private set; }
+    
+    public bool RepairMoneyPressed { get; private set; }
+    
+    public bool RepairMaterialsPressed { get; private set; }
 
     private void OnEnable()
     {
@@ -34,6 +38,8 @@ public class PlayerInput : MonoBehaviour, PlayerControls.IPlayerLocomotionMapAct
     {
         JumpPressed = false;
         InteractPressed = false;
+        RepairMoneyPressed = false;
+        RepairMaterialsPressed = false;
     }
 
     public void OnMovement(InputAction.CallbackContext context)
@@ -70,6 +76,22 @@ public class PlayerInput : MonoBehaviour, PlayerControls.IPlayerLocomotionMapAct
         if (context.performed)
         {
             InteractPressed = true;
+        }
+    }
+
+    public void OnRepairMoney(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            RepairMoneyPressed = true;
+        }
+    }
+
+    public void OnRepairMaterial(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            RepairMaterialsPressed = true;
         }
     }
 }

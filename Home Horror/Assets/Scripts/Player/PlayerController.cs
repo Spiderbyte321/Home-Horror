@@ -32,11 +32,15 @@ public class PlayerController : MonoBehaviour
     private float verticalVelocity = 0f;
     
     private Interactable currentInteractable;
+    private PlayerInventory inventory;
+    private GameUI gameUI;
 
     private void Awake()
     {
         input = GetComponent<PlayerInput>();
         state = GetComponent<PlayerState>();
+        inventory = GetComponent<PlayerInventory>();
+        gameUI = FindFirstObjectByType<GameUI>();
         
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -145,9 +149,22 @@ public class PlayerController : MonoBehaviour
     
     private void HandleInteraction()
     {
-        if (input.InteractPressed && currentInteractable != null)
+        if (input.InteractPressed && currentInteractable != null && currentInteractable.CompareTag("Pickup"))
         {
             currentInteractable.Interact();
+            gameUI.HideMaterialInfoPopup();
+        }
+        
+        if (input.RepairMoneyPressed && currentInteractable is DegradationController degradation && currentInteractable.CompareTag("RepairBox"))
+        {
+            bool repaired = degradation.TryRepairSystem(inventory, DegradationController.RepairMethod.Money);
+            if (!repaired) Debug.Log("Not enough money.");
+        }
+
+        if (input.RepairMaterialsPressed && currentInteractable is DegradationController degradation2 && currentInteractable.CompareTag("RepairBox"))
+        {
+            bool repaired = degradation2.TryRepairSystem(inventory, DegradationController.RepairMethod.Material);
+            if (!repaired) Debug.Log("Not enough resources.");
         }
     }
 
@@ -156,6 +173,33 @@ public class PlayerController : MonoBehaviour
         if (other.TryGetComponent(out Interactable interactable))
         {
             currentInteractable = interactable;
+            Debug.Log("Triggered Interactable");
+            
+            if (other.CompareTag("Pickup") && other.TryGetComponent(out MaterialController materialController))
+            {
+                gameUI.HideRepairInfoPopup();
+                
+                string name = materialController.MaterialType;
+                int amount = materialController.MaterialAmount;
+
+                gameUI.ShowMaterialInfoPopup(name, amount);
+            }
+
+            if (other.CompareTag("RepairBox") && other.TryGetComponent(out DegradationController degradation))
+            {
+                gameUI.HideMaterialInfoPopup();
+                
+                var stage = degradation.CurrentStage;
+
+                if (stage != null)
+                {
+                    int moneyCost = stage.moneyCost;
+                    string materialName = stage.materialType;
+                    int materialAmount = stage.materialAmount;
+
+                    gameUI.ShowRepairInfoPopup(moneyCost, materialName, materialAmount);
+                }
+            }
         }
     }
 
@@ -164,6 +208,16 @@ public class PlayerController : MonoBehaviour
         if (currentInteractable != null && other.gameObject == currentInteractable.gameObject)
         {
             currentInteractable = null;
+            
+            if (other.CompareTag("Pickup"))
+            {
+                gameUI.HideMaterialInfoPopup();
+            }
+
+            if (other.CompareTag("RepairBox"))
+            {
+                gameUI.HideRepairInfoPopup();
+            }
         }
     }
 }

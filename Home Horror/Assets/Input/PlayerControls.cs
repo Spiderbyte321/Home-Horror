@@ -135,6 +135,24 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""RepairMoney"",
+                    ""type"": ""Button"",
+                    ""id"": ""45f27092-b9e7-4267-924f-e679182c74db"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""RepairMaterial"",
+                    ""type"": ""Button"",
+                    ""id"": ""e9029908-fac9-4c6b-a737-caa41788722b"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -236,6 +254,28 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""action"": ""Interact"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5734db02-98db-46e7-abb8-f82669403c5d"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""RepairMoney"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""52db48fb-57d2-4e8c-a18f-0dc76034c144"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""RepairMaterial"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -249,6 +289,8 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_PlayerLocomotionMap_Jump = m_PlayerLocomotionMap.FindAction("Jump", throwIfNotFound: true);
         m_PlayerLocomotionMap_ToggleSprint = m_PlayerLocomotionMap.FindAction("ToggleSprint", throwIfNotFound: true);
         m_PlayerLocomotionMap_Interact = m_PlayerLocomotionMap.FindAction("Interact", throwIfNotFound: true);
+        m_PlayerLocomotionMap_RepairMoney = m_PlayerLocomotionMap.FindAction("RepairMoney", throwIfNotFound: true);
+        m_PlayerLocomotionMap_RepairMaterial = m_PlayerLocomotionMap.FindAction("RepairMaterial", throwIfNotFound: true);
     }
 
     ~@PlayerControls()
@@ -334,6 +376,8 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_PlayerLocomotionMap_Jump;
     private readonly InputAction m_PlayerLocomotionMap_ToggleSprint;
     private readonly InputAction m_PlayerLocomotionMap_Interact;
+    private readonly InputAction m_PlayerLocomotionMap_RepairMoney;
+    private readonly InputAction m_PlayerLocomotionMap_RepairMaterial;
     /// <summary>
     /// Provides access to input actions defined in input action map "PlayerLocomotionMap".
     /// </summary>
@@ -365,6 +409,14 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "PlayerLocomotionMap/Interact".
         /// </summary>
         public InputAction @Interact => m_Wrapper.m_PlayerLocomotionMap_Interact;
+        /// <summary>
+        /// Provides access to the underlying input action "PlayerLocomotionMap/RepairMoney".
+        /// </summary>
+        public InputAction @RepairMoney => m_Wrapper.m_PlayerLocomotionMap_RepairMoney;
+        /// <summary>
+        /// Provides access to the underlying input action "PlayerLocomotionMap/RepairMaterial".
+        /// </summary>
+        public InputAction @RepairMaterial => m_Wrapper.m_PlayerLocomotionMap_RepairMaterial;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -406,6 +458,12 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Interact.started += instance.OnInteract;
             @Interact.performed += instance.OnInteract;
             @Interact.canceled += instance.OnInteract;
+            @RepairMoney.started += instance.OnRepairMoney;
+            @RepairMoney.performed += instance.OnRepairMoney;
+            @RepairMoney.canceled += instance.OnRepairMoney;
+            @RepairMaterial.started += instance.OnRepairMaterial;
+            @RepairMaterial.performed += instance.OnRepairMaterial;
+            @RepairMaterial.canceled += instance.OnRepairMaterial;
         }
 
         /// <summary>
@@ -432,6 +490,12 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Interact.started -= instance.OnInteract;
             @Interact.performed -= instance.OnInteract;
             @Interact.canceled -= instance.OnInteract;
+            @RepairMoney.started -= instance.OnRepairMoney;
+            @RepairMoney.performed -= instance.OnRepairMoney;
+            @RepairMoney.canceled -= instance.OnRepairMoney;
+            @RepairMaterial.started -= instance.OnRepairMaterial;
+            @RepairMaterial.performed -= instance.OnRepairMaterial;
+            @RepairMaterial.canceled -= instance.OnRepairMaterial;
         }
 
         /// <summary>
@@ -507,5 +571,19 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnInteract(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "RepairMoney" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnRepairMoney(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "RepairMaterial" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnRepairMaterial(InputAction.CallbackContext context);
     }
 }

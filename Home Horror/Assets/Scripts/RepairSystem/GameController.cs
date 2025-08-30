@@ -13,12 +13,12 @@ public class GameController : MonoBehaviour
 
     private void OnEnable()
     {
-        MaterialController.MaterialInteraction += Proof;
+        //MaterialController.MaterialInteraction += Proof;
     }
 
     private void OnDisable()
     {
-        MaterialController.MaterialInteraction -= Proof;
+        //MaterialController.MaterialInteraction -= Proof;
     }
 
     void Update()
