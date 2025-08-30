@@ -1,6 +1,7 @@
 using UnityEngine;
 
-public abstract class ParentState//parent of the whole state machine
+// parent of the whole state machine
+public abstract class ParentState
 {
     public virtual Mesh Mesh { get; }
 
@@ -8,7 +9,6 @@ public abstract class ParentState//parent of the whole state machine
 
     public virtual int MaterialCost { get; }
 
-    //make a way for states to progress to one another
-
-
+    // make a way for states to progress to one another
+    
 }

@@ -14,7 +14,8 @@ public class SubtitleEntry
 public class SubtitleManager : MonoBehaviour
 {
     public TMP_Text subtitleDisplay;
-    public GameObject subtitlePanel; 
+    public GameObject subtitlePanel;
+    
     public KeyCode triggerKey = KeyCode.Space;
 
     [Header("Audio")]
@@ -22,17 +23,16 @@ public class SubtitleManager : MonoBehaviour
 
     [Header("Subtitles")]
     public List<SubtitleEntry> subtitleEntries = new List<SubtitleEntry>();
-
-
+    
     private Dictionary<string, SubtitleEntry> subtitleDictionary = new Dictionary<string, SubtitleEntry>();
 
     void Start()
     {
         subtitleDisplay.text = "";
+        
         if (subtitlePanel != null)
             subtitlePanel.SetActive(false);
-
-
+        
         foreach (var entry in subtitleEntries)
         {
             if (!string.IsNullOrEmpty(entry.soundName) && entry.audioClip != null)
@@ -93,6 +93,7 @@ public class SubtitleManager : MonoBehaviour
         yield return new WaitForSeconds(entry.audioClip.length);
 
         subtitleDisplay.text = "";
+        
         if (subtitlePanel != null)
             subtitlePanel.SetActive(false);
     }

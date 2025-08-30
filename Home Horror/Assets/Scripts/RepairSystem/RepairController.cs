@@ -2,20 +2,30 @@ using System;
 using TMPro;
 using UnityEngine;
 
-public class RepairController : Interactable//component that the state machine lives on
+// component that the state machine lives on
+public class RepairController : Interactable
 {
-
     [SerializeField] private MeshFilter Filter;
-    [SerializeField]private Mesh[] Meshes;
+    [SerializeField] private Mesh[] Meshes;
+    
     [SerializeField] private TextMeshPro Prompt;
+    
     private int dollarCost = 0;
     private int materialCost = 0;
-     private ParentState CurrentState;
+    
+    private ParentState CurrentState;
     
     public int DollarCost => dollarCost;
     public int MaterialCost => materialCost;
+
+    public void Start()
+    {
+        CurrentState = new DentedState(Meshes[1]);
+        Filter.mesh = CurrentState.Mesh;
+    }
     
-    private void OnEnable()//Just for showing it works not using events in final game
+    // Just for showing it works not using events in final game
+    private void OnEnable()
     {
         GameController.OnUpdateRepairables += ProgressStates;
     }
@@ -25,8 +35,9 @@ public class RepairController : Interactable//component that the state machine l
         GameController.OnUpdateRepairables -= ProgressStates;
     }
 
-    private void ProgressStates()// want to rework to follow the open closed principal
-    {// raaaaaaaghhhh!
+    // want to rework to follow the open closed principal
+    private void ProgressStates()
+    {
         switch(CurrentState)
         {
             case RepairedState:
@@ -51,7 +62,8 @@ public class RepairController : Interactable//component that the state machine l
         }
     }
 
-    private void Repair()//Created assuming that validation happens in the player controller
+    // Created assuming that validation happens in the player controller
+    private void Repair()
     {
         CurrentState = new RepairedState(Meshes[0]);
         Filter.mesh = CurrentState.Mesh;
@@ -59,7 +71,7 @@ public class RepairController : Interactable//component that the state machine l
         materialCost = CurrentState.MaterialCost;
     }
 
-    private void OnTriggerEnter(Collider other)
+    /*private void OnTriggerEnter(Collider other)
     {
         Prompt.gameObject.SetActive(true);
     }
@@ -67,7 +79,7 @@ public class RepairController : Interactable//component that the state machine l
     private void OnTriggerExit(Collider other)
     {
         Prompt.gameObject.SetActive(false);
-    }
+    }*/
 
     public override void Interact()
     {

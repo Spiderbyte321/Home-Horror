@@ -7,14 +7,15 @@ public class RepairedState : ParentState
     private int moneyCost =0;
 
     private int materialCost = 0;
+    
     public override Mesh Mesh => mesh;
+    
     public override int MoneyCost => moneyCost;
+    
     public override int MaterialCost => materialCost;
-
-
+    
     public RepairedState(Mesh MeshToHold)
     {
         mesh = MeshToHold;
     }
-    
 }

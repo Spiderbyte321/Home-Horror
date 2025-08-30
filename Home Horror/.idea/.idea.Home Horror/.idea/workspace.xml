@@ -5,42 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa562036-4b02-4f56-9fd0-665b7258a8bc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Home Horror/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Home Horror/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Home Horror/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Home Horror/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InputSystem_Actions.inputactions" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InputSystem_Actions.inputactions.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JacobScripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JacobScripts/Pickupables.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JacobScripts/Pickupables/Interactable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JacobScripts/Pickupables/Interactable.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JacobScripts/Pickupables/Material.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JacobScripts/Pickupables/Material.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JacobScripts/Pickupables/MaterialController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JacobScripts/Pickupables/MaterialController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JacobScripts/PlayerCharacter.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JacobScripts/PlayerCharacter/PlayerCharacter.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JacobScripts/PlayerCharacter/PlayerCharacter.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JacobScripts/RepairsSpaces.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JacobScripts/RepairsSpaces/BrokenState.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JacobScripts/RepairsSpaces/BrokenState.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JacobScripts/RepairsSpaces/DentedState.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JacobScripts/RepairsSpaces/DentedState.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JacobScripts/RepairsSpaces/GameController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JacobScripts/RepairsSpaces/GameController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JacobScripts/RepairsSpaces/ParentState.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JacobScripts/RepairsSpaces/ParentState.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JacobScripts/RepairsSpaces/RepairController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JacobScripts/RepairsSpaces/RepairController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JacobScripts/RepairsSpaces/RepairedState.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JacobScripts/RepairsSpaces/RepairedState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameplayScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameplayScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/JDevScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/JDevScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SubtitleManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SubtitleManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SumenScripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SumenScripts/PlayerController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SumenScripts/PlayerController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SumenScripts/PlayerMovement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SumenScripts/PlayerMovement.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pickups/Material.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pickups/Material.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pickups/MaterialController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pickups/MaterialController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RepairSystem/BrokenState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RepairSystem/BrokenState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RepairSystem/DentedState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RepairSystem/DentedState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RepairSystem/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RepairSystem/GameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RepairSystem/ParentState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RepairSystem/ParentState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RepairSystem/RepairController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RepairSystem/RepairController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RepairSystem/RepairedState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RepairSystem/RepairedState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SubtitleManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/SubtitleManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/DefaultVolumeProfile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/DefaultVolumeProfile.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +114,8 @@
       <workItem from="1754835064075" duration="590000" />
       <workItem from="1755416869148" duration="3488000" />
       <workItem from="1756456912792" duration="7434000" />
-      <workItem from="1756467925323" duration="10189000" />
+      <workItem from="1756467925323" duration="22461000" />
+      <workItem from="1756537001163" duration="6917000" />
     </task>
     <servers />
   </component>

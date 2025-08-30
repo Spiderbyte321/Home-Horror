@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    [SerializeField]
     public delegate void UpdateRepairablesAction();
 
     public static event UpdateRepairablesAction OnUpdateRepairables;
@@ -35,5 +34,4 @@ public class GameController : MonoBehaviour
         Debug.Log("Material Components:"+AMaterial.Name+"\n"+AMaterial.Amount);
         OnUpdatePickups?.Invoke(AMaterial);
     }
-    
 }
