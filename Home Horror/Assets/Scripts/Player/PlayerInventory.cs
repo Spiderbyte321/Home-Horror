@@ -50,7 +50,7 @@ public class PlayerInventory : MonoBehaviour
     public void AddMoney(int amount)
     {
         Money += amount;
-        Debug.Log($"Added ${amount}. Current Money: ${Money}");
+        Debug.Log($"Added R{amount}. Current Money: R{Money}");
     }
 
     public bool SpendMoney(int amount)
@@ -58,7 +58,7 @@ public class PlayerInventory : MonoBehaviour
         if (Money >= amount)
         {
             Money -= amount;
-            Debug.Log($"Spent ${amount}. Remaining Money: ${Money}");
+            Debug.Log($"Spent R{amount}. Remaining Money: R{Money}");
             return true;
         }
 

@@ -109,6 +109,8 @@ public class GameUI : MonoBehaviour
     public void ShowWinScreen()
     {
         if (winScreen == null) return;
+        HideMaterialInfoPopup();
+        HideRepairInfoPopup();
         winScreen.SetActive(true);
         
         Time.timeScale = 0f;
