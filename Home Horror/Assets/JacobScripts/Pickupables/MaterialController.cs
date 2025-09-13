@@ -26,6 +26,7 @@ public class MaterialController : MonoBehaviour,Interactable//component on the o
   
   private void OnTriggerEnter(Collider other)
   {
+      
     if (!other.CompareTag("Player"))
     {
       return;
