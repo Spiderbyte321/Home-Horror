@@ -2650,6 +2650,12 @@ MonoBehaviour:
   - soundName: WhoBuilt
     audioClip: {fileID: 8300000, guid: 3866cb15e835d0b4882918d7529c034b, type: 3}
     subtitleText: Who built this!?
+  - soundName: Resource
+    audioClip: {fileID: 8300000, guid: d83704d3a5208e14f94a8a7c4c6ef809, type: 3}
+    subtitleText: 
+  - soundName: spendMoney
+    audioClip: {fileID: 8300000, guid: 734a5ef2b1dfa6b43a059b8cfeff34e7, type: 3}
+    subtitleText: 
 --- !u!1 &2124625817
 GameObject:
   m_ObjectHideFlags: 0
@@ -2807,6 +2813,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1256149167173407980, guid: b21f2bdf78430a2409679705b488b4d3, type: 3}
+      propertyPath: subtitleManager
+      value: 
+      objectReference: {fileID: 2099665653}
     - target: {fileID: 2230888563152644138, guid: b21f2bdf78430a2409679705b488b4d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2847,6 +2857,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6317559726854435718, guid: b21f2bdf78430a2409679705b488b4d3, type: 3}
+      propertyPath: subtitleManager
+      value: 
+      objectReference: {fileID: 2099665653}
     - target: {fileID: 6679670689199421127, guid: b21f2bdf78430a2409679705b488b4d3, type: 3}
       propertyPath: m_Name
       value: Player
