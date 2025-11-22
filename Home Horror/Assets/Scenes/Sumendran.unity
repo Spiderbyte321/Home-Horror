@@ -795,7 +795,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &952315589
 Transform:
   m_ObjectHideFlags: 0
@@ -1047,6 +1047,86 @@ Transform:
   m_Children: []
   m_Father: {fileID: 367097727}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1131831337
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1131831339}
+  - component: {fileID: 1131831340}
+  - component: {fileID: 1131831341}
+  m_Layer: 6
+  m_Name: SpawnArea
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1131831339
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1131831337}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.82, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1131831340
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1131831337}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 9.839691, y: 1, z: 12.872021}
+  m_Center: {x: 0.0076351166, y: 0, z: -0.21651864}
+--- !u!114 &1131831341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1131831337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ece78e28cf2ed8241bce01dd3ea40819, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items:
+  - {fileID: 8576147182942723033, guid: 27c5541e1ab516e4cbcdf59710b9b741, type: 3}
+  itemCount: 3
+  checkRadius: 0.5
+  maxAttemptsPerItem: 15
+  groundLayers:
+    serializedVersion: 2
+    m_Bits: 128
+  obstacleLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  rayHeightOffset: 1
+  rayDistance: 20
+  spawnHeightOffset: 0
 --- !u!1001 &1192290693
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1265,7 +1345,7 @@ GameObject:
   - component: {fileID: 1313520369}
   - component: {fileID: 1313520368}
   - component: {fileID: 1313520367}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2217,7 +2297,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1707020614
 Transform:
   m_ObjectHideFlags: 0
@@ -2650,6 +2730,30 @@ MonoBehaviour:
   - soundName: WhoBuilt
     audioClip: {fileID: 8300000, guid: 3866cb15e835d0b4882918d7529c034b, type: 3}
     subtitleText: Who built this!?
+  - soundName: Resource
+    audioClip: {fileID: 8300000, guid: d83704d3a5208e14f94a8a7c4c6ef809, type: 3}
+    subtitleText: 
+  - soundName: spendMoney
+    audioClip: {fileID: 8300000, guid: 734a5ef2b1dfa6b43a059b8cfeff34e7, type: 3}
+    subtitleText: 
+  - soundName: Hurt1
+    audioClip: {fileID: 8300000, guid: da5671f5a751c2240a7d1c1b693e611b, type: 3}
+    subtitleText: 
+  - soundName: Hurt2
+    audioClip: {fileID: 8300000, guid: dc15a846b98d97044a224ca6a81de952, type: 3}
+    subtitleText: 
+  - soundName: Hurt3
+    audioClip: {fileID: 8300000, guid: 9c44c334eda09154584868c67d23bac0, type: 3}
+    subtitleText: 
+  - soundName: Hurt4
+    audioClip: {fileID: 8300000, guid: fed2dab38d7760e46a7b4be8ce04a28a, type: 3}
+    subtitleText: 
+  - soundName: Hurt5
+    audioClip: {fileID: 8300000, guid: c166b04112b6fa34199dd8340c7668c8, type: 3}
+    subtitleText: 
+  - soundName: Hurt6
+    audioClip: {fileID: 8300000, guid: 84a81884d65f5d84db1072ca9d0bb63c, type: 3}
+    subtitleText: 
 --- !u!1 &2124625817
 GameObject:
   m_ObjectHideFlags: 0
@@ -2807,6 +2911,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1256149167173407980, guid: b21f2bdf78430a2409679705b488b4d3, type: 3}
+      propertyPath: subtitleManager
+      value: 
+      objectReference: {fileID: 2099665653}
     - target: {fileID: 2230888563152644138, guid: b21f2bdf78430a2409679705b488b4d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2847,6 +2955,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6317559726854435718, guid: b21f2bdf78430a2409679705b488b4d3, type: 3}
+      propertyPath: subtitleManager
+      value: 
+      objectReference: {fileID: 2099665653}
     - target: {fileID: 6679670689199421127, guid: b21f2bdf78430a2409679705b488b4d3, type: 3}
       propertyPath: m_Name
       value: Player
@@ -2870,3 +2982,4 @@ SceneRoots:
   - {fileID: 1461195009}
   - {fileID: 1641763196}
   - {fileID: 410251141}
+  - {fileID: 1131831339}

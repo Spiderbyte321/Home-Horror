@@ -19,11 +19,13 @@ public class PlayerInput : MonoBehaviour, PlayerControls.IPlayerLocomotionMapAct
     
     public bool RepairMaterialsPressed { get; private set; }
 
+    public SubtitleManager subtitleManager; //keep here for later use 
+
     private void OnEnable()
     {
         PlayerControls = new PlayerControls();
         PlayerControls.Enable();
-        
+
         PlayerControls.PlayerLocomotionMap.Enable();
         PlayerControls.PlayerLocomotionMap.SetCallbacks(this);
     }

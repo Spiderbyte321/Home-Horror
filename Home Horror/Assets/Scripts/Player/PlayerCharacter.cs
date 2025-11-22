@@ -11,6 +11,8 @@ public class PlayerCharacter : MonoBehaviour
     [SerializeField] private int maxHealth = 100;
     [SerializeField] private int currentHealth = 90;
 
+    [SerializeField] private SubtitleManager subtitleManager;
+
     public int CurrentSanity => currentSanity;
     public int CurrentHealth => currentHealth;
 
@@ -21,6 +23,7 @@ public class PlayerCharacter : MonoBehaviour
     public delegate void HealthUpdateAction(int currentHealth);
 
     public static event HealthUpdateAction OnHealthAction;
+    
 
 
     private void OnEnable()
