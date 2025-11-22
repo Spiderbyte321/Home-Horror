@@ -13,11 +13,11 @@ public class PlayerCharacter : MonoBehaviour
 
     public int CurrentSanity => currentSanity;
     public int CurrentHealth => currentHealth;
+
+    public delegate void SanityUpdateAction(int curreSanity);
+
+    public static event SanityUpdateAction OnSanityUpdateAction;
     
-    public delegate void SanityStatusAction();
-
-    public static event SanityStatusAction OnSanityAction;
-
     public delegate void HealthUpdateAction(int currentHealth);
 
     public static event HealthUpdateAction OnHealthAction;
@@ -27,12 +27,13 @@ public class PlayerCharacter : MonoBehaviour
     {
         //Subscribe to event to heal
         //Sub to increase material and money
+
+        SanityEvent.OnSanityEvent += TakeSanityDamage;
     }
 
     private void OnDisable()
     {
-        //unsub
-        //unsub
+        SanityEvent.OnSanityEvent -= TakeSanityDamage;
     }
     
 
@@ -58,20 +59,18 @@ public class PlayerCharacter : MonoBehaviour
         }
     }
 
-    public void TakeHealthDamage(int ADamage)
+    private void TakeHealthDamage(int ADamage)
     {
         currentHealth -= ADamage;
         
         OnHealthAction?.Invoke(currentHealth);
     }
 
-    public void TakeSanityDamage(int ADamage) // Update to support more complex behaviour
+    private void TakeSanityDamage(int ADamage) 
     {
+        Debug.Log($"PLayer took : {ADamage} sanity damage");
         currentSanity -= ADamage;
-
-        if (currentSanity < sanityThreshold)
-        {
-            OnSanityAction?.Invoke();
-        }
+        OnSanityUpdateAction?.Invoke(currentSanity);
     }
+    
 }
