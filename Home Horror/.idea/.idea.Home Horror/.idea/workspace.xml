@@ -6,12 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="aa562036-4b02-4f56-9fd0-665b7258a8bc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Home Horror/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Home Horror/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/ScaleRef.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/ScaleRef/Ch36_nonPBR.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/ScaleRef/Ch36_nonPBR.fbx.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameplayScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameplayScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerInventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerInventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/GameUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/GameUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/VFXManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/VFXManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,6 +122,8 @@
       <workItem from="1756467925323" duration="22461000" />
       <workItem from="1756537001163" duration="28508000" />
       <workItem from="1756648529090" duration="4203000" />
+      <workItem from="1757933266620" duration="595000" />
+      <workItem from="1763801475845" duration="5209000" />
     </task>
     <servers />
   </component>
