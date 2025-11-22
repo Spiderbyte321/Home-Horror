@@ -2736,6 +2736,24 @@ MonoBehaviour:
   - soundName: spendMoney
     audioClip: {fileID: 8300000, guid: 734a5ef2b1dfa6b43a059b8cfeff34e7, type: 3}
     subtitleText: 
+  - soundName: Hurt1
+    audioClip: {fileID: 8300000, guid: da5671f5a751c2240a7d1c1b693e611b, type: 3}
+    subtitleText: 
+  - soundName: Hurt2
+    audioClip: {fileID: 8300000, guid: dc15a846b98d97044a224ca6a81de952, type: 3}
+    subtitleText: 
+  - soundName: Hurt3
+    audioClip: {fileID: 8300000, guid: 9c44c334eda09154584868c67d23bac0, type: 3}
+    subtitleText: 
+  - soundName: Hurt4
+    audioClip: {fileID: 8300000, guid: fed2dab38d7760e46a7b4be8ce04a28a, type: 3}
+    subtitleText: 
+  - soundName: Hurt5
+    audioClip: {fileID: 8300000, guid: c166b04112b6fa34199dd8340c7668c8, type: 3}
+    subtitleText: 
+  - soundName: Hurt6
+    audioClip: {fileID: 8300000, guid: 84a81884d65f5d84db1072ca9d0bb63c, type: 3}
+    subtitleText: 
 --- !u!1 &2124625817
 GameObject:
   m_ObjectHideFlags: 0
