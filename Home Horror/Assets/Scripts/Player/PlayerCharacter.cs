@@ -14,6 +14,8 @@ public class PlayerCharacter : MonoBehaviour
     public int CurrentSanity => currentSanity;
     public int CurrentHealth => currentHealth;
 
+    public int SanityThreshold => sanityThreshold;
+
     public delegate void SanityUpdateAction(int currentSanity);
 
     public static event SanityUpdateAction OnSanityUpdateAction;
@@ -25,6 +27,7 @@ public class PlayerCharacter : MonoBehaviour
         SanityEvent.OnSanityEvent += TakeSanityDamage;
         SanityDrainController.OnSanityDrain += TakeSanityDamage;
         DegradationController.OnRepairedAction += HealSanity;
+        GameManager.OnSystemLeft += TakeSanityDamage;
     }
 
     private void OnDisable()
@@ -32,6 +35,7 @@ public class PlayerCharacter : MonoBehaviour
         SanityEvent.OnSanityEvent -= TakeSanityDamage;
         SanityDrainController.OnSanityDrain -= TakeSanityDamage;
         DegradationController.OnRepairedAction -= HealSanity;
+        GameManager.OnSystemLeft -= TakeSanityDamage;
     }
     
     

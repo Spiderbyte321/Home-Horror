@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class GameManager : MonoBehaviour
 {
@@ -29,10 +31,23 @@ public class GameManager : MonoBehaviour
     [Header("Player Stats")]
     private PlayerCharacter playerCharacter;
 
+    [Header("Monster Stats")] [SerializeField]
+    private float MonsterSpawnThreshold =0.5f;
+
 
     public delegate void NightBeganAction(int playerStatusAmount);
 
     public static event NightBeganAction OnNightBegan;
+
+    public delegate void SystemleftAction(int playerSanityDamage);
+
+    public static event SystemleftAction OnSystemLeft;
+
+
+    private void OnEnable()
+    {
+        PlayerCharacter.OnSanityUpdateAction += HandlePlayerSanityAction;
+    }
 
     private void Start()
     {
@@ -52,6 +67,7 @@ public class GameManager : MonoBehaviour
         foreach (var system in degradationSystems)
         {
             system.HandleDayEnd(system.IsProblemActive()); // Only degrade active problems
+            OnSystemLeft?.Invoke(5);
         }
         
         currentDay++;
@@ -105,5 +121,11 @@ public class GameManager : MonoBehaviour
         Debug.Log("You reached your savings goal! The game has ended.");
         
         gameUI.ShowWinScreen();
+    }
+
+
+    private void HandlePlayerSanityAction(int playerSanity)
+    {
+        //monster spawn calc
     }
 }
