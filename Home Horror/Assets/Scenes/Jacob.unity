@@ -444,6 +444,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   drainRate: 3
   drainDelay: 5
+  drainAmount: 2
 --- !u!65 &178454253
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3158,6 +3159,8 @@ MonoBehaviour:
   maxProblemDelay: 10
   dailyMoneyReward: 100
   moneyGoal: 300
+  MonsterSpawnThreshold: 0.5
+  monsterV1Spawner: {fileID: 0}
 --- !u!114 &2099665651
 MonoBehaviour:
   m_ObjectHideFlags: 0

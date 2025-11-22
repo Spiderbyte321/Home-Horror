@@ -43,6 +43,8 @@ public class GameManager : MonoBehaviour
 
     public static event SystemleftAction OnSystemLeft;
 
+    [SerializeField] private AbstractMonsterSpawner monsterV1Spawner;
+
 
     private void OnEnable()
     {
@@ -126,6 +128,12 @@ public class GameManager : MonoBehaviour
 
     private void HandlePlayerSanityAction(int playerSanity)
     {
-        //monster spawn calc
+        float RanNumber = Random.Range(0, 2 * MonsterSpawnThreshold);
+
+        if (RanNumber > MonsterSpawnThreshold)
+        {
+            Debug.Log("spawning Monster");
+           monsterV1Spawner.SpawnMonster(playerCharacter.transform);
+        }
     }
 }
