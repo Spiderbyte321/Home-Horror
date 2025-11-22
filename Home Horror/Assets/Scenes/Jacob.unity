@@ -3118,6 +3118,7 @@ GameObject:
   - component: {fileID: 2099665652}
   - component: {fileID: 2099665653}
   - component: {fileID: 2099665654}
+  - component: {fileID: 2099665655}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -3160,7 +3161,7 @@ MonoBehaviour:
   dailyMoneyReward: 100
   moneyGoal: 300
   MonsterSpawnThreshold: 0.5
-  monsterV1Spawner: {fileID: 0}
+  monsterV1Spawner: {fileID: 2099665655}
 --- !u!114 &2099665651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3276,6 +3277,19 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 0d074df4a619e0448bcc35190503a2f5, type: 3}
   - {fileID: 8300000, guid: 2b21d037b612d7042add6a961af13a7d, type: 3}
   - {fileID: 8300000, guid: 9d928718258a1ef438ec8b3c8f6c28de, type: 3}
+--- !u!114 &2099665655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2099665648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9795982a2522e9745be77347cfa6f6dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monsterObject: {fileID: 8558256290288655012, guid: e593d17f6ddace743a082603503fee42, type: 3}
 --- !u!1 &2124625817
 GameObject:
   m_ObjectHideFlags: 0
