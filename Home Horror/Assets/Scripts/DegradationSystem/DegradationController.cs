@@ -7,6 +7,10 @@ public class DegradationController : Interactable
 {
     [SerializeField] private string[] stageAudioKeys;
     [SerializeField] private SFXController sfxController;
+
+    public delegate void OnProblemRepaired(int SanityHealAmount);
+
+    public static event OnProblemRepaired OnRepairedAction;
     
     public List<ProblemStageSO> stageData;
 
@@ -87,6 +91,8 @@ public class DegradationController : Interactable
         currentStageIndex = 0;
         gameUI.HideRepairInfoPopup();
         repairedToday = true;
+        OnRepairedAction?.Invoke(30);
+        
     }
 
     private void SetStage(int index)
