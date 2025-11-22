@@ -1,9 +1,13 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class DegradationController : Interactable
 {
+    [SerializeField] private string[] stageAudioKeys;
+    [SerializeField] private SFXController sfxController;
+    
     public List<ProblemStageSO> stageData;
 
     private int currentStageIndex = 0;
@@ -94,6 +98,11 @@ public class DegradationController : Interactable
                 currentStage.Exit(); // Call OnExitStage
             }
 
+            if(index < stageAudioKeys.Length)
+            {
+                sfxController.playLoopedSFX(stageAudioKeys[index]);
+            }
+            
             currentStage = stageData[index];
             currentStage.Enter(); // Call OnEnterStage
         }

@@ -53,7 +53,7 @@ public class SubtitleManager : MonoBehaviour
     {
         if (Input.GetKeyDown(triggerKey))
         {
-            PlayRandomSubtitle();
+           PlayRandomSubtitle();
         }
     }
 
@@ -97,4 +97,26 @@ public class SubtitleManager : MonoBehaviour
         if (subtitlePanel != null)
             subtitlePanel.SetActive(false);
     }
+
+    public void PlayRandomHurtSound()
+{
+    List<string> hurtKeys = new List<string>();
+
+    foreach (var key in subtitleDictionary.Keys)
+    {
+        if (key.Contains("Hurt")) 
+        {
+            hurtKeys.Add(key);
+        }
+    }
+
+    if (hurtKeys.Count == 0)
+    {
+        Debug.LogWarning("No hurt sound entries found!");
+        return;
+    }
+
+    string randomHurtKey = hurtKeys[Random.Range(0, hurtKeys.Count)];
+    PlaySubtitle(randomHurtKey);
+}
 }

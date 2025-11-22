@@ -7,6 +7,8 @@ public class PlayerInventory : MonoBehaviour
 
     public int Money { get; private set; } = 0;
 
+    public SubtitleManager subtitleManager;
+
     public void AddMaterial(Material material)
     {
         string type = material.Name.ToLower();
@@ -20,6 +22,7 @@ public class PlayerInventory : MonoBehaviour
             materials[type] = material.Amount;
         }
 
+        subtitleManager.PlaySubtitle("Resource");
         Debug.Log($"Added {material.Amount} of {type}. Total: {materials[type]}");
     }
 
@@ -58,6 +61,7 @@ public class PlayerInventory : MonoBehaviour
         if (Money >= amount)
         {
             Money -= amount;
+            subtitleManager.PlaySubtitle("spendMoney");
             Debug.Log($"Spent R{amount}. Remaining Money: R{Money}");
             return true;
         }

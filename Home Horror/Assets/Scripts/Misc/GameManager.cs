@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    
     public int currentDay = 1;
 
     [Header("Degradation Systems")]
@@ -25,9 +26,18 @@ public class GameManager : MonoBehaviour
     
     private GameUI gameUI;
 
+    [Header("Player Stats")]
+    private PlayerCharacter playerCharacter;
+
+
+    public delegate void NightBeganAction(int playerStatusAmount);
+
+    public static event NightBeganAction OnNightBegan;
+
     private void Start()
     {
         gameUI = FindFirstObjectByType<GameUI>();
+        playerCharacter = FindFirstObjectByType<PlayerCharacter>();
         StartNewDay();
     }
 
@@ -66,6 +76,7 @@ public class GameManager : MonoBehaviour
             }
         }
         
+        OnNightBegan?.Invoke(playerCharacter.CurrentSanity);
         dailyProblemRoutine = StartCoroutine(RandomProblemRoutine());
     }
 
