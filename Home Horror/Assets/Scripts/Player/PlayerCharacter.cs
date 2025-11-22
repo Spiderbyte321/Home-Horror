@@ -49,6 +49,7 @@ public class PlayerCharacter : MonoBehaviour
             currentHealth = maxHealth;
         }
         
+        subtitleManager.PlaySubtitle("NotBad");
         OnHealthAction?.Invoke(currentHealth);
     }
 
@@ -64,9 +65,11 @@ public class PlayerCharacter : MonoBehaviour
 
     private void TakeHealthDamage(int ADamage)
     {
+        Debug.Log($"PLayer took : {ADamage} health damage");
         currentHealth -= ADamage;
         
         OnHealthAction?.Invoke(currentHealth);
+        subtitleManager.PlayRandomHurtSound();
     }
 
     private void TakeSanityDamage(int ADamage) 
@@ -74,6 +77,6 @@ public class PlayerCharacter : MonoBehaviour
         Debug.Log($"PLayer took : {ADamage} sanity damage");
         currentSanity -= ADamage;
         OnSanityUpdateAction?.Invoke(currentSanity);
+        subtitleManager.PlayRandomHurtSound(); //Remove when adding the link to health damage
     }
-    
 }
