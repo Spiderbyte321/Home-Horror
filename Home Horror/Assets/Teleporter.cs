@@ -8,37 +8,31 @@ public class Teleporter : MonoBehaviour
 
     private bool isTeleporting = false;
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (isTeleporting || !other.CompareTag("Player")) return;
-        isTeleporting = true;
+    [SerializeField] private GameObject player;
 
-        StartCoroutine(TeleportRoutine());
-    }
+    [SerializeField] private GameObject spawnPoint;
+
+    private void OnTriggerEnter(Collider other)
+{
+    Debug.Log("Triggered by: " + other.name);
+    if (isTeleporting || !other.CompareTag("Player")) return;
+
+    Debug.Log("Player detected! Starting teleport.");
+    isTeleporting = true;
+    StartCoroutine(TeleportRoutine());
+}
+
 private IEnumerator TeleportRoutine()
 {
     yield return fader.FadeOut();
+    Debug.Log("FadeOut finished!");
 
-    // Load the new scene
-    AsyncOperation load = SceneManager.LoadSceneAsync("TeleportTest", LoadSceneMode.Single);
-    while (!load.isDone)
-        yield return null;
-
-    // Make sure the player exists in DontDestroyOnLoad
-    GameObject player = GameObject.FindWithTag("Player");
-
-    // Find spawn point in the new scene
-    GameObject spawnObject = GameObject.Find("SpawnPoint");
-
-    if (spawnObject != null)
-    {
-        player.transform.position = spawnObject.transform.position;
-        player.transform.rotation = spawnObject.transform.rotation;
-    }
-    else
-    {
-        Debug.LogWarning("SpawnPoint not found in scene!");
-    }
+   var controller = player.GetComponent<CharacterController>();
+controller.enabled = false;
+player.transform.position = spawnPoint.transform.position;
+controller.enabled = true;
+    Debug.Log("Teleported to spawn point: " + spawnPoint.transform.position);
+    Debug.Log("Player new position: " + player.transform.position);
 
     yield return fader.FadeIn();
 }
