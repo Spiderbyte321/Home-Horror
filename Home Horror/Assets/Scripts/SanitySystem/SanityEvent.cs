@@ -11,6 +11,7 @@ public class SanityEvent : MonoBehaviour
    [SerializeField] private int SanityDamage;
    [SerializeField] private MeshRenderer renderer;
    [SerializeField] private Collider triggerBox;
+   [SerializeField] private SFXController sfxController;
    
    public delegate void SanityEventAction(int SanityDamage);
 
@@ -29,7 +30,7 @@ public class SanityEvent : MonoBehaviour
       OnSanityEvent?.Invoke(SanityDamage);
       renderer.enabled = true;
       triggerBox.enabled = false;
-
+      sfxController.playJumpScare();
       StartCoroutine(DeactivateJumpScare());
    }
 
