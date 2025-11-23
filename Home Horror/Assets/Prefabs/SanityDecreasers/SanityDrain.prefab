@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4061944640264555866}
   - component: {fileID: 9212613442485929062}
   m_Layer: 0
-  m_Name: TestBasementEntrance
+  m_Name: SanityDrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

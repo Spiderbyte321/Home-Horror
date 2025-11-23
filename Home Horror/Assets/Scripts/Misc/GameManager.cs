@@ -147,10 +147,10 @@ public class GameManager : MonoBehaviour
 
         switch (sanityPercentage)
         {
-             case <20f: 
+             case <=40f: 
                  monsterV2Spawner.SpawnMonster(playerCharacter.transform); 
                  break;
-            case <30f: 
+            case <=60f: 
                 monsterV1Spawner.SpawnMonster(playerCharacter.transform);
                 break;
                

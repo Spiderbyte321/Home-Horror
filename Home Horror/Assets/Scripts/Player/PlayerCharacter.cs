@@ -30,6 +30,7 @@ public class PlayerCharacter : MonoBehaviour
         SanityDrainController.OnSanityDrain += TakeSanityDamage;
         DegradationController.OnRepairedAction += HealSanity;
         GameManager.OnSystemLeft += TakeSanityDamage;
+        MonsterV1.OnDamagePlayerAction += TakeSanityDamage;
     }
 
     private void OnDisable()
@@ -38,6 +39,7 @@ public class PlayerCharacter : MonoBehaviour
         SanityDrainController.OnSanityDrain -= TakeSanityDamage;
         DegradationController.OnRepairedAction -= HealSanity;
         GameManager.OnSystemLeft -= TakeSanityDamage;
+        MonsterV1.OnDamagePlayerAction -= TakeSanityDamage;
     }
     
     
