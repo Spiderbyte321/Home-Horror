@@ -31,7 +31,9 @@ public class ConcreteMonsterSpawner : AbstractMonsterSpawner
                 legalData.Add(data);
         }
 
-
+        if(legalData.Count<=0)
+            return;
+        
         int chosenDirection = Random.Range(0, legalData.Count);
 
         Vector3 ChosenSpawnPoint =Vector3.Lerp(SpawnOrigin.position, legalData[chosenDirection].point, 0.5f);

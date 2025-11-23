@@ -51,6 +51,11 @@ public class GameManager : MonoBehaviour
         PlayerCharacter.OnSanityUpdateAction += HandlePlayerSanityAction;
     }
 
+    private void OnDisable()
+    {
+        PlayerCharacter.OnSanityUpdateAction -= HandlePlayerSanityAction;
+    }
+
     private void Start()
     {
         gameUI = FindFirstObjectByType<GameUI>();
