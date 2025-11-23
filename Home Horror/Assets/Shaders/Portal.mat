@@ -55,7 +55,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Opacity: 0.728
+    - _Opacity: 0.507
     - _QueueControl: 0
     - _QueueOffset: 0
     - _RadialDistortion: 3.12
@@ -65,6 +65,6 @@ Material:
     - _TwirlScale: 2
     - _TwirlStrength: 15
     m_Colors:
-    - _Color: {r: 445.72195, g: 0, b: 0, a: 0.99215686}
+    - _Color: {r: 15.539376, g: 0, b: 0, a: 0.99215686}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

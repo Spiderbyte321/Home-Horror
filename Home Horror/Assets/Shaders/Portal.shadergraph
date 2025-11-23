@@ -554,8 +554,8 @@
     "m_ObjectId": "0e12dff2759d4c3c8a6646c08ef8d7d0",
     "m_Title": "Radial Noise",
     "m_Position": {
-        "x": -1399.0001220703125,
-        "y": 206.0000457763672
+        "x": -1399.2000732421875,
+        "y": 204.79998779296876
     }
 }
 
@@ -1134,8 +1134,8 @@
     "m_ObjectId": "3b6569c494854da58b0a9c04a601673a",
     "m_Title": "Twirl Noise",
     "m_Position": {
-        "x": -1589.0001220703125,
-        "y": -449.0000305175781
+        "x": -1589.5999755859375,
+        "y": -449.5999755859375
     }
 }
 
@@ -1243,7 +1243,7 @@
         "m_Id": "695c41e81e9148ef9bc9c000ef532e47"
     },
     "m_AllowMaterialOverride": false,
-    "m_SurfaceType": 1,
+    "m_SurfaceType": 0,
     "m_ZTestMode": 4,
     "m_ZWriteControl": 0,
     "m_AlphaMode": 2,
