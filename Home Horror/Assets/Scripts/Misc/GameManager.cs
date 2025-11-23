@@ -61,16 +61,20 @@ public class GameManager : MonoBehaviour
     public void EndDay()
     {
         Debug.Log($"Ending Day {currentDay}");
-
-        if (dailyProblemRoutine != null)
-            StopCoroutine(dailyProblemRoutine);
-
+        
         // Degrade any problems that weren’t fixed
         foreach (var system in degradationSystems)
         {
             system.HandleDayEnd(system.IsProblemActive()); // Only degrade active problems
-            OnSystemLeft?.Invoke(5);
+
+            if (system.IsProblemActive())
+            {
+                OnSystemLeft?.Invoke(5);
+            }
         }
+
+        if (dailyProblemRoutine != null)
+            StopCoroutine(dailyProblemRoutine);
         
         currentDay++;
 

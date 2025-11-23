@@ -5,11 +5,11 @@ using UnityEngine;
 public class PlayerCharacter : MonoBehaviour
 {
     [SerializeField] private int maxSanity = 100;
-    [SerializeField] private int currentSanity = 90;
+    [SerializeField] private int currentSanity = 100;
     [SerializeField] private int sanityThreshold = 40;
     
     [SerializeField] private int maxHealth = 100;
-    [SerializeField] private int currentHealth = 90;
+    [SerializeField] private int currentHealth = 100;
 
     public int CurrentSanity => currentSanity;
     public int CurrentHealth => currentHealth;
