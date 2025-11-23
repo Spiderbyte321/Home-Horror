@@ -13,7 +13,7 @@ public class DoorController : Interactable
         togglePromptVisibility();   
     }
 
-    private void OnTriggerExit(Collider other)
+    protected virtual void OnTriggerExit(Collider other)
     {
         togglePromptVisibility();
     }

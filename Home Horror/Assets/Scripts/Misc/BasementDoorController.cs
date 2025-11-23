@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using UnityEngine;
 
 public class BasementDoorController : DoorController
@@ -11,6 +13,15 @@ public class BasementDoorController : DoorController
 
       portalEnabled = !portalEnabled;
       portal.SetActive(portalEnabled);
-      //spawn materials
+   }
+
+
+   protected override void OnTriggerExit(Collider other)
+   {
+      base.OnTriggerExit(other);
+
+      if(portalEnabled)
+         toggleDoorState();
    }
 }
+
