@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerCharacter : MonoBehaviour
@@ -7,22 +6,17 @@ public class PlayerCharacter : MonoBehaviour
     [SerializeField] private int maxSanity = 100;
     [SerializeField] private int currentSanity = 100;
     [SerializeField] private int sanityThreshold = 10;
-    
+
     [SerializeField] private int maxHealth = 100;
     [SerializeField] private int currentHealth = 100;
 
     public int CurrentSanity => currentSanity;
     public int CurrentHealth => currentHealth;
-
     public int SanityThreshold => sanityThreshold;
-
     public int MaxSanity => maxSanity;
 
     public delegate void SanityUpdateAction(int currentSanity);
-
     public static event SanityUpdateAction OnSanityUpdateAction;
-    
-
 
     private void OnEnable()
     {
@@ -39,36 +33,45 @@ public class PlayerCharacter : MonoBehaviour
         DegradationController.OnRepairedAction -= HealSanity;
         GameManager.OnSystemLeft -= TakeSanityDamage;
     }
-    
-    
 
-    private void HealSanity(int AHealedAmount)
+
+    private void HealSanity(int healedAmount)
     {
-        currentSanity += AHealedAmount;
+        currentSanity += healedAmount;
 
-        if(CurrentSanity >= maxSanity)
-        {
+        if (currentSanity >= maxSanity)
             currentSanity = maxSanity;
-        }
-        
-        OnSanityUpdateAction?.Invoke(currentHealth);
-    }
-
-    private void TakeHealthDamage(int ADamage)
-    {
-        Debug.Log($"Player took : {ADamage} health damage");
-        currentHealth -= ADamage;
-    }
-
-    private void TakeSanityDamage(int ADamage) 
-    {
-        Debug.Log($"PLayer took : {ADamage} sanity damage");
-        currentSanity -= ADamage;
-        
-        if(currentSanity < sanityThreshold)
-            TakeHealthDamage(sanityThreshold-currentSanity);
         
         OnSanityUpdateAction?.Invoke(currentSanity);
     }
-    
+
+    private void TakeHealthDamage(int damage)
+    {
+        Debug.Log($"Player took : {damage} health damage");
+
+        currentHealth -= damage;
+
+        if (currentHealth <= 0)
+        {
+            currentHealth = 0;
+
+            Debug.Log("PLAYER DIED!");
+
+            GameManager.TriggerPlayerDeath();
+        }
+    }
+
+    private void TakeSanityDamage(int damage)
+    {
+        Debug.Log($"Player took : {damage} sanity damage");
+        currentSanity -= damage;
+
+        if (currentSanity < sanityThreshold)
+        {
+            int overflow = sanityThreshold - currentSanity;
+            TakeHealthDamage(overflow);
+        }
+
+        OnSanityUpdateAction?.Invoke(currentSanity);
+    }
 }

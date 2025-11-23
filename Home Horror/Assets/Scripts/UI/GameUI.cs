@@ -19,6 +19,8 @@ public class GameUI : MonoBehaviour
     
     [SerializeField] private PlayerInventory playerInventory;
     [SerializeField] private GameManager gameManager;
+    
+    public GameObject loseScreen;
 
     private void Update()
     {
@@ -114,5 +116,16 @@ public class GameUI : MonoBehaviour
         winScreen.SetActive(true);
         
         Time.timeScale = 0f;
+    }
+    
+    public void ShowLoseScreen()
+    {
+        if (loseScreen == null) return;
+    
+        HideMaterialInfoPopup();
+        HideRepairInfoPopup();
+    
+        loseScreen.SetActive(true);
+        Time.timeScale = 0f; // Pause game
     }
 }
