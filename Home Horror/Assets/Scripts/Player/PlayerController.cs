@@ -167,6 +167,11 @@ public class PlayerController : MonoBehaviour
             bool repaired = degradation2.TryRepairSystem(inventory, DegradationController.RepairMethod.Material);
             if (!repaired) Debug.Log("Not enough resources.");
         }
+
+        if (input.InteractPressed&&currentInteractable is DoorController)
+        {
+            currentInteractable.Interact();
+        }
     }
 
     private void OnTriggerEnter(Collider other)
