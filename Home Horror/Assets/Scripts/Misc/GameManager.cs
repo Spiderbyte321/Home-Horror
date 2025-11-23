@@ -31,10 +31,11 @@ public class GameManager : MonoBehaviour
     [Header("Player Stats")]
     private PlayerCharacter playerCharacter;
 
-    [Header("Monster Stats")] [SerializeField]
-    private float MonsterSpawnThreshold =0.5f;
+    [Header("Monster Spawners")] 
+    
+    [SerializeField] private AbstractMonsterSpawner monsterV1Spawner;
 
-
+    [SerializeField] private AbstractMonsterSpawner monsterV2Spawner;
     public delegate void NightBeganAction(int playerStatusAmount);
 
     public static event NightBeganAction OnNightBegan;
@@ -43,7 +44,7 @@ public class GameManager : MonoBehaviour
 
     public static event SystemleftAction OnSystemLeft;
 
-    [SerializeField] private AbstractMonsterSpawner monsterV1Spawner;
+   
 
 
     private void OnEnable()
@@ -137,12 +138,17 @@ public class GameManager : MonoBehaviour
 
     private void HandlePlayerSanityAction(int playerSanity)
     {
-        float RanNumber = Random.Range(0, 2 * MonsterSpawnThreshold);
+        float sanityPercentage = (float)playerSanity / playerCharacter.MaxSanity*100;
 
-        if (RanNumber > MonsterSpawnThreshold)
+        switch (sanityPercentage)
         {
-            Debug.Log("spawning Monster");
-           monsterV1Spawner.SpawnMonster(playerCharacter.transform);
+             case <20f: 
+                 monsterV2Spawner.SpawnMonster(playerCharacter.transform); 
+                 break;
+            case <30f: 
+                monsterV1Spawner.SpawnMonster(playerCharacter.transform);
+                break;
+               
         }
     }
 }

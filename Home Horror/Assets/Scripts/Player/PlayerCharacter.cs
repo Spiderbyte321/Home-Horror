@@ -6,7 +6,7 @@ public class PlayerCharacter : MonoBehaviour
 {
     [SerializeField] private int maxSanity = 100;
     [SerializeField] private int currentSanity = 100;
-    [SerializeField] private int sanityThreshold = 40;
+    [SerializeField] private int sanityThreshold = 10;
     
     [SerializeField] private int maxHealth = 100;
     [SerializeField] private int currentHealth = 100;
@@ -17,6 +17,8 @@ public class PlayerCharacter : MonoBehaviour
     public int CurrentHealth => currentHealth;
 
     public int SanityThreshold => sanityThreshold;
+
+    public int MaxSanity => maxSanity;
 
     public delegate void SanityUpdateAction(int currentSanity);
 

@@ -26,6 +26,8 @@ public class SubtitleManager : MonoBehaviour
     
     private Dictionary<string, SubtitleEntry> subtitleDictionary = new Dictionary<string, SubtitleEntry>();
 
+    public static SubtitleManager instance;
+
     void Start()
     {
         subtitleDisplay.text = "";
@@ -47,6 +49,18 @@ public class SubtitleManager : MonoBehaviour
                 }
             }
         }
+
+        if (instance = null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(instance);
+            instance = this;
+        }
+        
+        
     }
 
     void Update()
