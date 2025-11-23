@@ -1,40 +1,53 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class Teleporter : MonoBehaviour
 {
     [SerializeField] private ScreenFader fader;
+    [SerializeField] private GameObject player;
+    [SerializeField] private Transform[] spawnPoints;
 
     private bool isTeleporting = false;
+    private Collider triggerCol;
 
-    [SerializeField] private GameObject player;
-
-    [SerializeField] private GameObject spawnPoint;
+    private void Awake()
+    {
+        triggerCol = GetComponent<Collider>();
+    }
 
     private void OnTriggerEnter(Collider other)
-{
-    Debug.Log("Triggered by: " + other.name);
-    if (isTeleporting || !other.CompareTag("Player")) return;
+    {
+        if (!other.CompareTag("Player") || isTeleporting) return;
 
-    Debug.Log("Player detected! Starting teleport.");
-    isTeleporting = true;
-    StartCoroutine(TeleportRoutine());
-}
+        StartCoroutine(TeleportRoutine());
+    }
 
-private IEnumerator TeleportRoutine()
-{
-    yield return fader.FadeOut();
-    Debug.Log("FadeOut finished!");
+    private IEnumerator TeleportRoutine()
+    {
+        isTeleporting = true;
 
-   var controller = player.GetComponent<CharacterController>();
-controller.enabled = false;
-player.transform.position = spawnPoint.transform.position;
-controller.enabled = true;
-    Debug.Log("Teleported to spawn point: " + spawnPoint.transform.position);
-    Debug.Log("Player new position: " + player.transform.position);
+        // Disable trigger so it can't fire twice
+        triggerCol.enabled = false;
 
-    yield return fader.FadeIn();
-}
+        yield return fader.FadeOut();
 
+        var controller = player.GetComponent<CharacterController>();
+        controller.enabled = false;
+
+        Transform randomSpawn = spawnPoints[Random.Range(0, spawnPoints.Length)];
+        player.transform.position = randomSpawn.position;
+
+        controller.enabled = true;
+
+        // ★ SAFE NOW: only called once
+        ItemSpawnerManager.Instance.SpawnTodayItems();
+
+        yield return fader.FadeIn();
+
+        // Small delay before enabling trigger again
+        yield return new WaitForSeconds(0.25f);
+
+        triggerCol.enabled = true;
+        isTeleporting = false;
+    }
 }
