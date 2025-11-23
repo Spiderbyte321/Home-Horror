@@ -11,8 +11,6 @@ public class PlayerCharacter : MonoBehaviour
     [SerializeField] private int maxHealth = 100;
     [SerializeField] private int currentHealth = 100;
 
-    [SerializeField] private int monsterSpawnThreshold;
-
     public int CurrentSanity => currentSanity;
     public int CurrentHealth => currentHealth;
 
@@ -52,6 +50,8 @@ public class PlayerCharacter : MonoBehaviour
         {
             currentSanity = maxSanity;
         }
+        
+        OnSanityUpdateAction?.Invoke(currentHealth);
     }
 
     private void TakeHealthDamage(int ADamage)
@@ -68,9 +68,7 @@ public class PlayerCharacter : MonoBehaviour
         if(currentSanity < sanityThreshold)
             TakeHealthDamage(sanityThreshold-currentSanity);
         
-        
-        if(currentSanity<monsterSpawnThreshold) 
-            OnSanityUpdateAction?.Invoke(currentSanity);
+        OnSanityUpdateAction?.Invoke(currentSanity);
     }
     
 }

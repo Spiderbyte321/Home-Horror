@@ -33,6 +33,8 @@ public class GameManager : MonoBehaviour
 
     [Header("Monster Spawners")] 
     
+    [SerializeField] private int monsterSpawnThreshold = 50;
+    
     [SerializeField] private AbstractMonsterSpawner monsterV1Spawner;
 
     [SerializeField] private AbstractMonsterSpawner monsterV2Spawner;
@@ -138,6 +140,9 @@ public class GameManager : MonoBehaviour
 
     private void HandlePlayerSanityAction(int playerSanity)
     {
+        if(playerSanity>monsterSpawnThreshold)
+            return;
+        
         float sanityPercentage = (float)playerSanity / playerCharacter.MaxSanity*100;
 
         switch (sanityPercentage)

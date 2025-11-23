@@ -10,7 +10,29 @@ public class MonsterV2 : AbstractMonster
     [SerializeField] private NavMeshAgent agent;
     [SerializeField] private string[] tauntKeys;
     [SerializeField] private AudioSource speaker;
+    [SerializeField] private float monsterHealThreshold = 60f;
     private bool revealed;
+
+    private void OnEnable()
+    {
+        PlayerCharacter.OnSanityUpdateAction += checkSanity;
+    }
+
+    private void OnDisable()
+    {
+        PlayerCharacter.OnSanityUpdateAction -= checkSanity;
+    }
+
+    private void checkSanity(int playerSanity)
+    {
+        if (playerSanity < monsterHealThreshold)
+            return;
+        
+        StopCoroutine(wander());
+        StopCoroutine(taunt());
+        Destroy(gameObject);
+    }
+
     private void OnBecameVisible()
     {
         if(revealed)
@@ -29,7 +51,7 @@ public class MonsterV2 : AbstractMonster
             Vector3 wanderPoint = Random.insideUnitSphere * 5;
             Vector3 moveVector = new Vector3(wanderPoint.x, agent.transform.position.y, wanderPoint.z);
                         
-            if(agent.remainingDistance < 0.01f)
+            if(agent.remainingDistance < 0.001f)
             {
                agent.SetDestination(moveVector);             
             }
