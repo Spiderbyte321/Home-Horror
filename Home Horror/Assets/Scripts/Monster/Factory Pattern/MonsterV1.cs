@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class MonsterV1 : AbstractMonster
 {
+    
+    
     private bool revealed;
+
+    public delegate void damagePLayer(int damageDealt);
+
+    public static event damagePLayer OnDamagePlayerAction;
     private void OnBecameVisible()
     {
         if(revealed)
@@ -19,5 +25,10 @@ public class MonsterV1 : AbstractMonster
     {
         yield return new WaitForSeconds(3);
         Destroy(gameObject);
+    }
+
+    private void damagePlayer()
+    {
+        OnDamagePlayerAction?.Invoke(10);
     }
 }
