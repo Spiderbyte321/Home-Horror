@@ -342,15 +342,15 @@ GameObject:
   - component: {fileID: 5073637092161922910}
   - component: {fileID: 1771487743313859053}
   - component: {fileID: 1132688994659531869}
-  - component: {fileID: 1961571839275400322}
   - component: {fileID: 8377314657799576447}
+  - component: {fileID: 3101738919252995376}
   m_Layer: 0
   m_Name: PortalWall.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5073637092161922910
 Transform:
   m_ObjectHideFlags: 0
@@ -419,28 +419,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &1961571839275400322
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1403950615328890799}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -1378849409088152705, guid: e8c3a8d923ead934aabc4730c97a4fce, type: 3}
 --- !u!114 &8377314657799576447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -455,7 +433,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fader: {fileID: 0}
   player: {fileID: 0}
-  spawnPoints: []
+  spawnPoints:
+  - {fileID: 0}
+  isBasementDoor: 0
+--- !u!65 &3101738919252995376
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403950615328890799}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.017442856, y: 0.006618577, z: 0.020008234}
+  m_Center: {x: -0.09652628, y: -0.10823173, z: 0.07984463}
 --- !u!1 &1566273161422538732
 GameObject:
   m_ObjectHideFlags: 0
@@ -681,15 +682,15 @@ GameObject:
   - component: {fileID: 4963218657053416389}
   - component: {fileID: 1608817113074531855}
   - component: {fileID: 3921471737231307903}
-  - component: {fileID: 3308549934701922070}
   - component: {fileID: 7479369274209010562}
+  - component: {fileID: 1262452765536978771}
   m_Layer: 0
   m_Name: PortalWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4963218657053416389
 Transform:
   m_ObjectHideFlags: 0
@@ -758,28 +759,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &3308549934701922070
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2058640140584289888}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -1360808658879051318, guid: e8c3a8d923ead934aabc4730c97a4fce, type: 3}
 --- !u!114 &7479369274209010562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -794,7 +773,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fader: {fileID: 0}
   player: {fileID: 0}
-  spawnPoints: []
+  spawnPoints:
+  - {fileID: 0}
+  isBasementDoor: 0
+--- !u!65 &1262452765536978771
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058640140584289888}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.004969406, y: 0.017442845, z: 0.020008244}
+  m_Center: {x: -0.10759685, y: 0.021588575, z: 0.07984466}
 --- !u!1 &2287038727191475177
 GameObject:
   m_ObjectHideFlags: 0
@@ -808,6 +810,7 @@ GameObject:
   - component: {fileID: 2507138024446505708}
   - component: {fileID: 7690653714226674895}
   - component: {fileID: 2403407963025647442}
+  - component: {fileID: 1356436792400818353}
   m_Layer: 0
   m_Name: BasementDoor
   m_TagString: Untagged
@@ -925,8 +928,29 @@ MonoBehaviour:
   prompter: {fileID: 5312249347626752856}
   secondPrompter: {fileID: 3240344235884381812}
   renderer: {fileID: 2507138024446505708}
-  collisionBox: {fileID: 7690653714226674895}
+  collisionBox: {fileID: 1356436792400818353}
   portal: {fileID: 2058640140584289888}
+--- !u!65 &1356436792400818353
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2287038727191475177}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.009643278, y: 0.017402697, z: 0.019999994}
+  m_Center: {x: -0.10536715, y: 0.021646934, z: 0.079892665}
 --- !u!1 &2728799292054156249
 GameObject:
   m_ObjectHideFlags: 0
@@ -1319,7 +1343,7 @@ Transform:
   m_GameObject: {fileID: 3047943278025535875}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -9.8, y: 7.1, z: -33.06}
+  m_LocalPosition: {x: -9.8, y: 7.417, z: -33.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1350,7 +1374,7 @@ Transform:
   m_GameObject: {fileID: 3204548344064600024}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.27, y: 7.1, z: -41.12}
+  m_LocalPosition: {x: 9.801, y: 7.339, z: -41.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1596,7 +1620,7 @@ Transform:
   m_GameObject: {fileID: 3695773381166338215}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.88, y: 10.4, z: -40.3}
+  m_LocalPosition: {x: 9.88, y: 6.46, z: -39.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2632,7 +2656,7 @@ Transform:
   m_GameObject: {fileID: 5403437239121800205}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -9.26, y: 7.1, z: -20.91}
+  m_LocalPosition: {x: -9.634, y: 7.768, z: -20.91}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2651,6 +2675,7 @@ GameObject:
   - component: {fileID: 2855075803837573879}
   - component: {fileID: 2382792986776550907}
   - component: {fileID: 8999527294943032462}
+  - component: {fileID: 8184056066131557018}
   m_Layer: 0
   m_Name: BasementDoor.001
   m_TagString: Untagged
@@ -2768,8 +2793,29 @@ MonoBehaviour:
   prompter: {fileID: 5160455273751665942}
   secondPrompter: {fileID: 1272441910166508855}
   renderer: {fileID: 2855075803837573879}
-  collisionBox: {fileID: 2382792986776550907}
+  collisionBox: {fileID: 8184056066131557018}
   portal: {fileID: 1403950615328890799}
+--- !u!65 &8184056066131557018
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6266960275184755142}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.017402707, y: 0.009209253, z: 0.020000003}
+  m_Center: {x: -0.09658464, y: -0.10704378, z: 0.07989267}
 --- !u!1 &6897203428385581822
 GameObject:
   m_ObjectHideFlags: 0
@@ -3057,15 +3103,15 @@ GameObject:
   - component: {fileID: 7060438719229569837}
   - component: {fileID: 14733752588046795}
   - component: {fileID: 2685053681401508702}
-  - component: {fileID: 4620175562880700083}
   - component: {fileID: 2430857403798916898}
+  - component: {fileID: 4189879033170605841}
   m_Layer: 0
   m_Name: PortalWall.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7060438719229569837
 Transform:
   m_ObjectHideFlags: 0
@@ -3134,28 +3180,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &4620175562880700083
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8084345125766425668}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 6268885792153688264, guid: e8c3a8d923ead934aabc4730c97a4fce, type: 3}
 --- !u!114 &2430857403798916898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3172,6 +3196,28 @@ MonoBehaviour:
   player: {fileID: 0}
   spawnPoints:
   - {fileID: 0}
+  isBasementDoor: 0
+--- !u!65 &4189879033170605841
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8084345125766425668}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.017442856, y: 0.0068507395, z: 0.020008234}
+  m_Center: {x: 0.0996995, y: 0.108327575, z: 0.07984464}
 --- !u!1 &8200451157267631571
 GameObject:
   m_ObjectHideFlags: 0
@@ -3294,6 +3340,7 @@ GameObject:
   - component: {fileID: 6678397407910903650}
   - component: {fileID: 4480866768650799102}
   - component: {fileID: 7807176663388004454}
+  - component: {fileID: 7617821728565212422}
   m_Layer: 0
   m_Name: BasementDoor.002
   m_TagString: Untagged
@@ -3411,8 +3458,29 @@ MonoBehaviour:
   prompter: {fileID: 1980953580580805715}
   secondPrompter: {fileID: 5230808363386315836}
   renderer: {fileID: 6678397407910903650}
-  collisionBox: {fileID: 4480866768650799102}
+  collisionBox: {fileID: 7617821728565212422}
   portal: {fileID: 8084345125766425668}
+--- !u!65 &7617821728565212422
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8278733116244561197}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.017402707, y: 0.009958726, z: 0.019999994}
+  m_Center: {x: 0.09975786, y: 0.10688097, z: 0.079892665}
 --- !u!1 &8614700449577225725
 GameObject:
   m_ObjectHideFlags: 0
