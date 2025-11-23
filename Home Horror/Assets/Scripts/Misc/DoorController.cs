@@ -31,9 +31,8 @@ public class DoorController : Interactable
         toggleDoorState();
     }
 
-    private void toggleDoorState()
+    protected virtual void toggleDoorState()
     {
-        Debug.Log("toggling door state");
         renderer.enabled = !renderer.enabled;
          collisionBox.enabled = !collisionBox.enabled;
     }
