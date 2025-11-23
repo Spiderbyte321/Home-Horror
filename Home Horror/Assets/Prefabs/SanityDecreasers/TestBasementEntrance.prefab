@@ -121,6 +121,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef51827409823504aa27c74eba640bda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  drainRate: 3
+  drainRate: 2
   drainDelay: 5
-  drainAmount: 2
+  drainAmount: 3

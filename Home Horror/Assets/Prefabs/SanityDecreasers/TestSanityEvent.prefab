@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36b270df4b61c0a4fbb60241c0679efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SanityDamage: 10
+  SanityDamage: 20
   renderer: {fileID: 8063389513302698670}
   triggerBox: {fileID: 4642731180367939792}
   sfxController: {fileID: 5009402206173874219}
