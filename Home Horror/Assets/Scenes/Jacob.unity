@@ -791,11 +791,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 195713103}
   m_CullTransparentMesh: 1
---- !u!1 &348634839 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1881899514307476481, guid: e8ba66afc36474b459456d2c8c03ef83, type: 3}
-  m_PrefabInstance: {fileID: 5411694169576920708}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &367097726
 GameObject:
   m_ObjectHideFlags: 0
@@ -2410,29 +2405,12 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8130541337880294226, guid: e8ba66afc36474b459456d2c8c03ef83, type: 3}
   m_PrefabInstance: {fileID: 5411694169576920708}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 348634839}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2f2ddc63c0b9e12419b233ddee96a2b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1550522335
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 348634839}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30cae9f64c8fb604e8528deafcefcd68, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scareKeys:
-  - scare1
-  - scare2
-  - scare3
-  audioSource: {fileID: 2082024390}
 --- !u!1 &1575917064
 GameObject:
   m_ObjectHideFlags: 0
@@ -3390,6 +3368,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1015619443}
     m_Modifications:
+    - target: {fileID: 686149299571663395, guid: e8ba66afc36474b459456d2c8c03ef83, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 2082024390}
     - target: {fileID: 1881899514307476481, guid: e8ba66afc36474b459456d2c8c03ef83, type: 3}
       propertyPath: m_Name
       value: RepairBox
@@ -3434,33 +3416,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8130541337880294226, guid: e8ba66afc36474b459456d2c8c03ef83, type: 3}
-      propertyPath: sfxController
-      value: 
-      objectReference: {fileID: 1550522335}
-    - target: {fileID: 8130541337880294226, guid: e8ba66afc36474b459456d2c8c03ef83, type: 3}
-      propertyPath: stageAudioKeys.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8130541337880294226, guid: e8ba66afc36474b459456d2c8c03ef83, type: 3}
-      propertyPath: 'stageAudioKeys.Array.data[0]'
-      value: flicker
-      objectReference: {fileID: 0}
-    - target: {fileID: 8130541337880294226, guid: e8ba66afc36474b459456d2c8c03ef83, type: 3}
-      propertyPath: 'stageAudioKeys.Array.data[1]'
-      value: fizzle
-      objectReference: {fileID: 0}
-    - target: {fileID: 8130541337880294226, guid: e8ba66afc36474b459456d2c8c03ef83, type: 3}
-      propertyPath: 'stageAudioKeys.Array.data[2]'
-      value: blackout
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1881899514307476481, guid: e8ba66afc36474b459456d2c8c03ef83, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1550522335}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8ba66afc36474b459456d2c8c03ef83, type: 3}
 --- !u!1001 &9098064857693618336
 PrefabInstance:
