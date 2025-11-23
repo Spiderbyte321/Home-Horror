@@ -7,9 +7,10 @@ public class SanityDrainController : MonoBehaviour
 {
     [SerializeField] private float drainRate;
     [SerializeField] private float drainDelay;
+    [SerializeField] private int drainAmount;
     private bool isActive;
 
-    public delegate void SanityDrainAction();
+    public delegate void SanityDrainAction(int drainAmount);
 
     public static event SanityDrainAction OnSanityDrain;
     private void OnTriggerEnter(Collider other)
@@ -30,8 +31,8 @@ public class SanityDrainController : MonoBehaviour
 
         while (true)
         {
-            yield return new WaitForSeconds(drainDelay / 60);
-            OnSanityDrain?.Invoke();
+            yield return new WaitForSeconds(drainRate);
+            OnSanityDrain?.Invoke(drainAmount);
         }
     }
 }
