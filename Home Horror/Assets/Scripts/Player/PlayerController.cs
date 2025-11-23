@@ -37,6 +37,7 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
+        DontDestroyOnLoad(gameObject);
         input = GetComponent<PlayerInput>();
         state = GetComponent<PlayerState>();
         inventory = GetComponent<PlayerInventory>();
