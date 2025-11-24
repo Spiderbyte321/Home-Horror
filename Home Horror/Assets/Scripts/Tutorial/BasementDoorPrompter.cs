@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class BasementDoorPrompter : MonoBehaviour
@@ -18,5 +19,13 @@ public class BasementDoorPrompter : MonoBehaviour
     private void BangAudio()
     {
         speaker.Play();
+        StartCoroutine(stopBanging());
+    }
+
+    private IEnumerator stopBanging()
+    {
+        yield return new WaitForSeconds(7);
+        
+        speaker.Stop();
     }
 }

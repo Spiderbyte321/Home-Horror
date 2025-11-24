@@ -17,6 +17,7 @@ public class MonsterV1 : AbstractMonster
             return;
 
         revealed = true;
+        damagePlayer();
         StartCoroutine(disapearRoutine());
     }
 
@@ -28,6 +29,6 @@ public class MonsterV1 : AbstractMonster
 
     private void damagePlayer()
     {
-        OnDamagePlayerAction?.Invoke(10);
+        OnDamagePlayerAction?.Invoke(4);
     }
 }

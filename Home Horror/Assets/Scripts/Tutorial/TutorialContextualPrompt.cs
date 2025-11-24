@@ -12,7 +12,10 @@ public class TutorialContextualPrompt : MonoBehaviour
 
    private void OnTriggerEnter(Collider other)
    {
-      if(other.CompareTag("Player"))
-         PromptPlayerAction?.Invoke(prompt);
+      if (other.CompareTag("Player"))
+      {
+         PromptPlayerAction?.Invoke(prompt+" \n Press F to continue");
+         gameObject.SetActive(false);
+      }
    }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameUI : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI moneyText;
+    [SerializeField] protected TextMeshProUGUI moneyText;
     public InventorySlot[] slots;
     
     public GameObject materialsPopup;
