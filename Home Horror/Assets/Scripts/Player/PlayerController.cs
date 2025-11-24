@@ -34,6 +34,8 @@ public class PlayerController : MonoBehaviour
     private Interactable currentInteractable;
     private PlayerInventory inventory;
     private GameUI gameUI;
+    public GameObject inventoryPanel;
+    public GameObject inventoryButton;
 
     private void Awake()
     {
@@ -53,6 +55,23 @@ public class PlayerController : MonoBehaviour
         HandleLateralMovement();
         HandleVerticalMovement();
         HandleInteraction();
+        
+        if (Input.GetKeyDown(KeyCode.Tab))
+            ShowInventory();
+    }
+
+    private void ShowInventory()
+    {
+        if (!inventoryPanel.activeSelf)
+        {
+            inventoryButton.SetActive(false);
+            inventoryPanel.SetActive(true);
+        }
+        else
+        {
+            inventoryButton.SetActive(true);
+            inventoryPanel.SetActive(false);
+        }
     }
 
     private void LateUpdate()

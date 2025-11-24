@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameUI : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI moneyText;
-    [SerializeField] private TextMeshProUGUI inventoryText;
+    public InventorySlot[] slots;
     
     public GameObject materialsPopup;
     private GameObject materialsActivePopup;
@@ -25,23 +25,20 @@ public class GameUI : MonoBehaviour
     private void Update()
     {
         UpdateMoneyText();
-        UpdateInventoryText();
+        UpdateInventorySlots();
     }
 
-    private void UpdateInventoryText()
+    private void UpdateInventorySlots()
     {
-        if (playerInventory == null || inventoryText == null)
-            return;
+        if (playerInventory == null) return;
 
         var materials = playerInventory.GetAllMaterials();
-        StringBuilder sb = new StringBuilder();
 
-        foreach (var kvp in materials)
+        foreach (var slot in slots)
         {
-            sb.AppendLine($"{Capitalize(kvp.Key)}: {kvp.Value}");
+            materials.TryGetValue(slot.materialKey.ToLower(), out int count);
+            slot.UpdateSlot(count);
         }
-
-        inventoryText.text = sb.ToString();
     }
     
     private string Capitalize(string word)

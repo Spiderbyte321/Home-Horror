@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: FullBlackout
   m_EditorClassIdentifier: 
   moneyCost: 25
-  materialType: Doom
+  materialType: Wires
   materialAmount: 5
