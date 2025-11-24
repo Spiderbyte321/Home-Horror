@@ -71,4 +71,9 @@ public class Teleporter : MonoBehaviour
         triggerCol.enabled = true;
         isTeleporting = false;
     }
+
+    protected virtual void PlayerTeleported()
+    {
+        // Can be overridden in subclasses for additional behavior
+    }
 }
