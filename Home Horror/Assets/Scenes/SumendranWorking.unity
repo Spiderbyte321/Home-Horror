@@ -1473,11 +1473,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5515475243394295835, guid: 26913b986127a27488956cd451dd3b25, type: 3}
       propertyPath: m_Size.z
-      value: 2.025343
+      value: 1.8158245
       objectReference: {fileID: 0}
     - target: {fileID: 5515475243394295835, guid: 26913b986127a27488956cd451dd3b25, type: 3}
       propertyPath: m_Center.z
-      value: 0.77785206
+      value: 0.8258238
       objectReference: {fileID: 0}
     - target: {fileID: 5515475243394295835, guid: 26913b986127a27488956cd451dd3b25, type: 3}
       propertyPath: m_IsTrigger
@@ -7512,11 +7512,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5515475243394295835, guid: 26913b986127a27488956cd451dd3b25, type: 3}
       propertyPath: m_Size.z
-      value: 1.6594659
+      value: 1.5161546
       objectReference: {fileID: 0}
     - target: {fileID: 5515475243394295835, guid: 26913b986127a27488956cd451dd3b25, type: 3}
       propertyPath: m_Center.z
-      value: -0.30780432
+      value: -0.32104957
       objectReference: {fileID: 0}
     - target: {fileID: 5515475243394295835, guid: 26913b986127a27488956cd451dd3b25, type: 3}
       propertyPath: m_IsTrigger
@@ -7581,11 +7581,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5515475243394295835, guid: 26913b986127a27488956cd451dd3b25, type: 3}
       propertyPath: m_Size.z
-      value: 2.1062756
+      value: 1.9765854
       objectReference: {fileID: 0}
     - target: {fileID: 5515475243394295835, guid: 26913b986127a27488956cd451dd3b25, type: 3}
       propertyPath: m_Center.z
-      value: 0.3563013
+      value: 0.3934803
       objectReference: {fileID: 0}
     - target: {fileID: 5515475243394295835, guid: 26913b986127a27488956cd451dd3b25, type: 3}
       propertyPath: m_IsTrigger
@@ -8595,11 +8595,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5515475243394295835, guid: 26913b986127a27488956cd451dd3b25, type: 3}
       propertyPath: m_Size.z
-      value: 1.6594659
+      value: 1.5486509
       objectReference: {fileID: 0}
     - target: {fileID: 5515475243394295835, guid: 26913b986127a27488956cd451dd3b25, type: 3}
       propertyPath: m_Center.z
-      value: -0.30780432
+      value: -0.36321184
       objectReference: {fileID: 0}
     - target: {fileID: 5515475243394295835, guid: 26913b986127a27488956cd451dd3b25, type: 3}
       propertyPath: m_IsTrigger
@@ -9116,11 +9116,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5515475243394295835, guid: 26913b986127a27488956cd451dd3b25, type: 3}
       propertyPath: m_Size.z
-      value: 2.7113817
+      value: 2.4882324
       objectReference: {fileID: 0}
     - target: {fileID: 5515475243394295835, guid: 26913b986127a27488956cd451dd3b25, type: 3}
       propertyPath: m_Center.z
-      value: 0.43483284
+      value: 0.4906484
       objectReference: {fileID: 0}
     - target: {fileID: 5515475243394295835, guid: 26913b986127a27488956cd451dd3b25, type: 3}
       propertyPath: m_IsTrigger
@@ -10026,7 +10026,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemPrefabs:
   - {fileID: 864519724173214255, guid: 416bba1f94cfbe146973226f54fe5f68, type: 3}
-  - {fileID: 8576147182942723033, guid: 27c5541e1ab516e4cbcdf59710b9b741, type: 3}
   baseItemCount: 5
   gameManager: {fileID: 2099665650}
 --- !u!114 &2099665661
