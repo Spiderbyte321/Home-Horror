@@ -11,6 +11,7 @@ public class TutorialManager : MonoBehaviour
         [SerializeField] private GameObject basementDoor;
         [SerializeField] private GameObject[] basementJumpscares;
         [SerializeField] private GameObject hiddenLetter;
+        [SerializeField] private GameObject letterDialogueBox;
         private Dictionary<TutorialCollisionBox, bool> CheckPlayerCollisions = new Dictionary<TutorialCollisionBox, bool>();
 
         public delegate void OnPlayerExplored();
@@ -33,6 +34,7 @@ public class TutorialManager : MonoBehaviour
                         CheckPlayerCollisions.Add(playerTriggerColisions[i],false);
                 }
         }
+        
 
 
         private void OnEnable()
@@ -62,6 +64,7 @@ public class TutorialManager : MonoBehaviour
                 
                 PlayerExploredAction?.Invoke();
                 hiddenLetter.SetActive(true);
+                letterDialogueBox.SetActive(true);
         }
 
         private void InformGame()
@@ -75,6 +78,7 @@ public class TutorialManager : MonoBehaviour
         {
                 wallSegment.SetActive(false);
                 basementDoor.SetActive(true);
+                SubtitleManager.instance.PlaySubtitle("racket");
                 PlayerAwokenAction?.Invoke();
         }
 

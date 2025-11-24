@@ -11,8 +11,13 @@ public class TutorialCollisionBox : MonoBehaviour
     public static event OnTutorialBoxTriggered TutorialBoxTriggeredAction;
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Player"))
-            TutorialBoxTriggeredAction?.Invoke(this);
+        if (other.CompareTag("Player"))
+        {
+             TutorialBoxTriggeredAction?.Invoke(this);
+             SubtitleManager.instance.PlaySubtitle(VoiceKey);
+             Destroy(this);
+        }
+           
             
     }
 }

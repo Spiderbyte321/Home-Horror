@@ -12,5 +12,6 @@ public class ConfirmLetter : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         OnLetterConfirmedAction?.Invoke();
+        SubtitleManager.instance.PlaySubtitle("freedom");
     }
 }

@@ -1,7 +1,9 @@
+using System;
 using UnityEngine;
 using TMPro;
 using System.Collections;
 using System.Collections.Generic;
+using Random = UnityEngine.Random;
 
 [System.Serializable]
 public class SubtitleEntry
@@ -26,6 +28,20 @@ public class SubtitleManager : MonoBehaviour
 
     public static SubtitleManager instance;
 
+
+    private void Awake()
+    {
+        if(instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(instance);
+            instance = this;
+        }
+    }
+
     void Start()
     {
         subtitleDisplay.text = "";
@@ -47,18 +63,6 @@ public class SubtitleManager : MonoBehaviour
                 }
             }
         }
-
-        if (instance = null)
-        {
-            instance = this;
-        }
-        else
-        {
-            Destroy(instance);
-            instance = this;
-        }
-        
-        
     }
 
     public void PlaySubtitle(string fileName)
