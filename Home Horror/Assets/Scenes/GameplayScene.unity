@@ -3009,14 +3009,6 @@ PrefabInstance:
       propertyPath: 'spawnPoints.Array.data[0]'
       value: 
       objectReference: {fileID: 451928745}
-    - target: {fileID: 7896772773771996659, guid: 75a3852cc70dbb54e86975d3dc25811f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3.06
-      objectReference: {fileID: 0}
-    - target: {fileID: 7896772773771996659, guid: 75a3852cc70dbb54e86975d3dc25811f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -34.19
-      objectReference: {fileID: 0}
     - target: {fileID: 8377314657799576447, guid: 75a3852cc70dbb54e86975d3dc25811f, type: 3}
       propertyPath: fader
       value: 
