@@ -158,6 +158,30 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &48573928 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 891852802195898491, guid: 1caee3660f74f5c40b12ae7421c944d1, type: 3}
+  m_PrefabInstance: {fileID: 1896110039}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &48573935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 48573928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42d5eed18e59a1441bec9edc14e9cc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fader: {fileID: 1827321375}
+  player: {fileID: 824857335}
+  spawnPoints:
+  - {fileID: 499030239}
+  - {fileID: 499030238}
+  - {fileID: 499030237}
+  isBasementDoor: 1
 --- !u!1 &56270243
 GameObject:
   m_ObjectHideFlags: 0
@@ -1068,7 +1092,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1602,7 +1626,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &546858877
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2769,8 +2793,8 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0, g: 0, b: 0, a: 1}
-    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 0.5921569}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.5471698, g: 0.5471698, b: 0.5471698, a: 0.5019608}
@@ -2791,7 +2815,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 882410142}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1697712038}
+        m_TargetAssemblyTypeName: ConfirmLetter, Assembly-CSharp
+        m_MethodName: confirm
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &882410142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4486,7 +4522,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1350515540
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4610,7 +4646,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bfca48a7c671254f91a2bfcd783605b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterCanvasGroup: {fileID: 0}
+  letterPrompt: {fileID: 546858876}
+  letterCanvasGroup: {fileID: 1697712035}
 --- !u!1001 &1359456806
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6143,6 +6180,7 @@ GameObject:
   - component: {fileID: 1697712037}
   - component: {fileID: 1697712036}
   - component: {fileID: 1697712035}
+  - component: {fileID: 1697712038}
   m_Layer: 5
   m_Name: LetterPanel
   m_TagString: Untagged
@@ -6179,7 +6217,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1697712033}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -6221,6 +6259,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1697712033}
   m_CullTransparentMesh: 1
+--- !u!114 &1697712038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1697712033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c77f75f9ef36374cbf67d103b3bf7ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1748532495
 GameObject:
   m_ObjectHideFlags: 0
@@ -6611,7 +6661,7 @@ MonoBehaviour:
   - {fileID: 1426941371}
   - {fileID: 272589607}
   - {fileID: 213088914}
-  hiddenLetter: {fileID: 0}
+  hiddenLetter: {fileID: 1350515539}
 --- !u!4 &1827321371
 Transform:
   m_ObjectHideFlags: 0
@@ -7117,12 +7167,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5040077005617551705, guid: 1caee3660f74f5c40b12ae7421c944d1, type: 3}
     m_RemovedGameObjects:
     - {fileID: 7733094458373769704, guid: 1caee3660f74f5c40b12ae7421c944d1, type: 3}
     - {fileID: 7582365475047478937, guid: 1caee3660f74f5c40b12ae7421c944d1, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 891852802195898491, guid: 1caee3660f74f5c40b12ae7421c944d1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 48573935}
   m_SourcePrefab: {fileID: 100100000, guid: 1caee3660f74f5c40b12ae7421c944d1, type: 3}
 --- !u!114 &1896110040 stripped
 MonoBehaviour:
