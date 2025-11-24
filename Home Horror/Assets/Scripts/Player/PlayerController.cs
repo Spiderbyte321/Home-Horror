@@ -196,6 +196,7 @@ public class PlayerController : MonoBehaviour
         {
             interactionTriggered = true;
             currentInteractable.Interact();
+            currentInteractable = null;
             gameUI.HideMaterialInfoPopup();
         }
         
@@ -215,7 +216,7 @@ public class PlayerController : MonoBehaviour
             interactionTriggered = true;
         }
 
-        if(input.InteractPressed && currentInteractable is not null)
+        if (input.InteractPressed && currentInteractable is not null)
         {
             currentInteractable.Interact();
             

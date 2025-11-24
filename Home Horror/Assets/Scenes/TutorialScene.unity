@@ -7321,7 +7321,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8183
   itemPrefabs:
   - {fileID: 864519724173214255, guid: f564cc1ea1fcae24dac8b1ebcf436955, type: 3}
   - {fileID: 864519724173214255, guid: 416bba1f94cfbe146973226f54fe5f68, type: 3}

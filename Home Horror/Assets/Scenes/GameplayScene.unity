@@ -5672,6 +5672,10 @@ MonoBehaviour:
   - flicker
   - fizzle
   - blackout
+  - taunt1
+  - taunt2
+  - taunt3
+  - taunt4
   values:
   - {fileID: 8300000, guid: 1a417d1300bfc1949a10065c3cd2f9a0, type: 3}
   - {fileID: 8300000, guid: 8b40141446d2ee64aa4a1b289adfc550, type: 3}
@@ -5679,6 +5683,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 0d074df4a619e0448bcc35190503a2f5, type: 3}
   - {fileID: 8300000, guid: 2b21d037b612d7042add6a961af13a7d, type: 3}
   - {fileID: 8300000, guid: 9d928718258a1ef438ec8b3c8f6c28de, type: 3}
+  - {fileID: 8300000, guid: 2b65b31207c076347bc629c3aad30b81, type: 3}
+  - {fileID: 8300000, guid: 201c50004ab09144581ac3b665c4d68e, type: 3}
+  - {fileID: 8300000, guid: d768adc039a7d7c48af1b344c974b7e2, type: 3}
+  - {fileID: 8300000, guid: f103edb35eddb5d448ab9945bf62ca0b, type: 3}
   globalSpeaker: {fileID: 830326027}
   sfxMixer: {fileID: 24100000, guid: 2125618f134f11c4e941edfa190352de, type: 2}
 --- !u!114 &2099665657
