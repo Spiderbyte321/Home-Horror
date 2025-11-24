@@ -939,7 +939,7 @@ AudioSource:
   m_GameObject: {fileID: 410251139}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -8713473948805725212, guid: 2125618f134f11c4e941edfa190352de, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
@@ -1778,7 +1778,7 @@ AudioSource:
   m_GameObject: {fileID: 830326025}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: 2125618f134f11c4e941edfa190352de, type: 2}
+  OutputAudioMixerGroup: {fileID: -751126274577602207, guid: 2125618f134f11c4e941edfa190352de, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
@@ -2054,6 +2054,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monsterv2
       objectReference: {fileID: 0}
+    - target: {fileID: 8771289586078624903, guid: e1da5a6031ddae743a667b26074d1905, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -8713473948805725212, guid: 2125618f134f11c4e941edfa190352de, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2414,6 +2418,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monsterv2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8771289586078624903, guid: e1da5a6031ddae743a667b26074d1905, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -8713473948805725212, guid: 2125618f134f11c4e941edfa190352de, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2476,6 +2484,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monsterv2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8771289586078624903, guid: e1da5a6031ddae743a667b26074d1905, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -8713473948805725212, guid: 2125618f134f11c4e941edfa190352de, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3400,6 +3412,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monsterv2 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8771289586078624903, guid: e1da5a6031ddae743a667b26074d1905, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -8713473948805725212, guid: 2125618f134f11c4e941edfa190352de, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5464,6 +5480,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca10c8bb178ab534082cb1c9015cf598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 0
   itemPrefabs:
   - {fileID: 864519724173214255, guid: 416bba1f94cfbe146973226f54fe5f68, type: 3}
   - {fileID: 864519724173214255, guid: f564cc1ea1fcae24dac8b1ebcf436955, type: 3}
