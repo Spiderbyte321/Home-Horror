@@ -52,7 +52,7 @@ public class Teleporter : MonoBehaviour
 
         // Move player
         player.transform.position = randomSpawn.position;
-
+        PlayerTeleported();
         // Re-enable controller
         controller.enabled = true;
 

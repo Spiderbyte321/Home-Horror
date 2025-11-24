@@ -30,7 +30,7 @@ public class MonsterV2 : AbstractMonster
         
         StopCoroutine(wander());
         StopCoroutine(taunt());
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 
     private void OnBecameVisible()

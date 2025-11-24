@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,6 +10,7 @@ public class TutorialManager : MonoBehaviour
         [SerializeField] private GameObject wallSegment;
         [SerializeField] private GameObject basementDoor;
         [SerializeField] private GameObject[] basementJumpscares;
+        [SerializeField] private GameObject hiddenLetter;
         private Dictionary<TutorialCollisionBox, bool> CheckPlayerCollisions = new Dictionary<TutorialCollisionBox, bool>();
 
         public delegate void OnPlayerExplored();
@@ -37,12 +39,14 @@ public class TutorialManager : MonoBehaviour
         {
                 TutorialCollisionBox.TutorialBoxTriggeredAction += PlayerEplored;
                 TutorialBasementDoor.TutorialBasementDoorAction += InformGame;
+                DayEndController.OnBedInteracted += RevealBasementDoor;
         }
 
         private void OnDisable()
         {
                 TutorialCollisionBox.TutorialBoxTriggeredAction -= PlayerEplored;
                 TutorialBasementDoor.TutorialBasementDoorAction -= InformGame;
+                DayEndController.OnBedInteracted -= RevealBasementDoor;
         }
 
 
@@ -57,17 +61,18 @@ public class TutorialManager : MonoBehaviour
                 }
                 
                 PlayerExploredAction?.Invoke();
+                hiddenLetter.SetActive(true);
         }
 
         private void InformGame()
         { 
                 PlayerEnteredBasementAction?.Invoke();
+                StartCoroutine(JumpscareDelay());
         }
 
 
         private void RevealBasementDoor()//Trigger event once we fade back in
         {
-                //Play sound effect
                 wallSegment.SetActive(false);
                 basementDoor.SetActive(true);
                 PlayerAwokenAction?.Invoke();
@@ -76,8 +81,15 @@ public class TutorialManager : MonoBehaviour
         private void PrimeBasementJumpScares()
         {
                 foreach (GameObject scare in basementJumpscares)
-                {
+                { 
                         scare.SetActive(true);
                 }
+        }
+
+
+        private IEnumerator JumpscareDelay()
+        {
+                yield return new WaitForSeconds(7);
+                PrimeBasementJumpScares();
         }
 }
