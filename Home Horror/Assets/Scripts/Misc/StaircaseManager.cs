@@ -18,7 +18,7 @@ public class StaircaseManager : MonoBehaviour
             s.gameObject.SetActive(s == target);
     }
 
-    // Enable ALL staircases (used when player leaves the basement)
+    // Enable ALL staircasess
     public void ActivateAll()
     {
         foreach (var s in staircases)

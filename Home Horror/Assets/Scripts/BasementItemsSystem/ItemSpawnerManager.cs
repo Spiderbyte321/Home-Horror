@@ -61,14 +61,12 @@ public class ItemSpawnerManager : MonoBehaviour
 
             if (area.TryGetSpawnPoint(out Vector3 pos))
             {
-                // ⭐ SNAP TO GROUND BEFORE SPAWNING ⭐
                 if (Physics.Raycast(pos + Vector3.up * 2f, Vector3.down, out RaycastHit hit, 10f))
                 {
                     pos = hit.point;
                 }
                 else
                 {
-                    // No ground found? try again
                     continue;
                 }
 

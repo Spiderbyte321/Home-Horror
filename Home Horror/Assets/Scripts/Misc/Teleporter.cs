@@ -6,7 +6,6 @@ public class Teleporter : MonoBehaviour
     [SerializeField] private ScreenFader fader;
     [SerializeField] private GameObject player;
 
-    // These are the spawnpoints *this teleporter* can choose from
     [SerializeField] private Transform[] spawnPoints;
 
     [SerializeField] private bool isBasementDoor = false;

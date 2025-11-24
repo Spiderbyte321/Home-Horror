@@ -36,8 +36,7 @@ public class BasementPortalTeleporter : MonoBehaviour
         // Pick random point to teleport to
         Transform randomSpawn = spawnPoints[Random.Range(0, spawnPoints.Length)];
 
-        // ✔ Player is leaving basement → enable ALL staircases again
-       // ✔ Enable ALL staircases first
+        // enable ALL staircases again
 StaircaseManager.Instance.ActivateAll();
 
 // Move player AFTER staircases are reactivated
@@ -52,7 +51,7 @@ yield return fader.FadeIn();
 // Delay
 yield return new WaitForSeconds(0.25f);
 
-// ✔ Re-enable trigger AFTER everything is active again
+//  Re-enable trigger AFTER everything is active again
 triggerCol.enabled = true;
 isTeleporting = false;
 
