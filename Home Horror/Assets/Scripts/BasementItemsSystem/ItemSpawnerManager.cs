@@ -67,8 +67,6 @@ public class ItemSpawnerManager : MonoBehaviour
         {
             GameObject prefab = itemPrefabs[Random.Range(0, itemPrefabs.Length)];
             GameObject obj = Instantiate(prefab, pos, Quaternion.identity);
-
-            obj.tag = "SpawnedItem";
             spawnedItems.Add(obj);
 
             spawned++;

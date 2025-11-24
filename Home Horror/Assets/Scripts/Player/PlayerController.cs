@@ -189,6 +189,8 @@ public class PlayerController : MonoBehaviour
                 int amount = materialController.MaterialAmount;
 
                 gameUI.ShowMaterialInfoPopup(name, amount);
+                
+                Debug.Log("Pickup Triggered");
             }
 
             if (other.CompareTag("RepairBox") && other.TryGetComponent(out DegradationController degradation))
