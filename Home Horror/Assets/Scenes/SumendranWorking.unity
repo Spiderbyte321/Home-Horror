@@ -10024,6 +10024,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca10c8bb178ab534082cb1c9015cf598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 8183
   itemPrefabs:
   - {fileID: 864519724173214255, guid: 416bba1f94cfbe146973226f54fe5f68, type: 3}
   baseItemCount: 5
@@ -10160,6 +10163,14 @@ PrefabInstance:
       propertyPath: 'spawnPoints.Array.data[0]'
       value: 
       objectReference: {fileID: 1941748745}
+    - target: {fileID: 4261613595266516866, guid: 75a3852cc70dbb54e86975d3dc25811f, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4261613595266516866, guid: 75a3852cc70dbb54e86975d3dc25811f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6744432200931937142, guid: 75a3852cc70dbb54e86975d3dc25811f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

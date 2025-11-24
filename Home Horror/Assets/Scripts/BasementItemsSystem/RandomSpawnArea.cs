@@ -14,39 +14,42 @@ public class RandomSpawnArea : MonoBehaviour
     }
 
     public bool TryGetSpawnPoint(out Vector3 pos)
+{
+    for (int i = 0; i < 50; i++)
     {
-        // Try many times to find a good spot
-        for (int i = 0; i < 50; i++)
+        Vector3 randomXZ = GetRandomPointXZ();
+
+        // Start raycast slightly above the expected floor height
+        Vector3 rayStart = randomXZ + new Vector3(0f, 1f, 0f);
+
+        // Short raycast so it NEVER touches roof or high walls
+        if (Physics.Raycast(rayStart, Vector3.down, out RaycastHit hit, 2f))
         {
-            Vector3 randomXZ = GetRandomPointXZ();
+            // Reject walls / slopes
+            if (hit.normal.y < 0.95f)
+                continue;
 
-            // Start raycast from FAR ABOVE to ensure ground hit
-            Vector3 rayStart = new Vector3(randomXZ.x, area.bounds.max.y + 10f, randomXZ.z);
+            // Reject anything too high (interior walls top)
+            if (hit.point.y > 0.5f) // adjust based on your basement
+                continue;
 
-            if (Physics.Raycast(rayStart, Vector3.down, out RaycastHit hit, 100f))
+            // Reject too low (holes, pits)
+            if (hit.point.y < -0.5f)
+                continue;
+
+            // Anti-clipping
+            if (!Physics.CheckSphere(hit.point, checkRadius, collisionMask))
             {
-                Vector3 ground = hit.point;
-
-                // small scatter to avoid identical positions
-                ground += new Vector3(
-                    Random.Range(-0.2f, 0.2f),
-                    0f,
-                    Random.Range(-0.2f, 0.2f)
-                );
-
-                // ensure not clipping into walls/objects
-                if (!Physics.CheckSphere(ground, checkRadius, collisionMask))
-                {
-                    pos = ground;
-                    return true;
-                }
+                pos = hit.point;
+                return true;
             }
         }
-
-        // failed
-        pos = Vector3.zero;
-        return false;
     }
+
+    pos = Vector3.zero;
+    return false;
+}
+
 
     // Random XZ inside collider footprint
     private Vector3 GetRandomPointXZ()
