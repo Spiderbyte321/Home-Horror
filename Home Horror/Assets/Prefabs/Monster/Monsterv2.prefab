@@ -145,7 +145,7 @@ GameObject:
   - component: {fileID: 7815036872437918978}
   m_Layer: 0
   m_Name: Monsterv2
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -282,3 +282,4 @@ MonoBehaviour:
   - taunt2
   - taunt3
   speaker: {fileID: 8771289586078624903}
+  monsterHealThreshold: 60

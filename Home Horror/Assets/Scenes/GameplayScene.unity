@@ -9582,6 +9582,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 29782036464514542, guid: 1caee3660f74f5c40b12ae7421c944d1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 87333584922824856, guid: 1caee3660f74f5c40b12ae7421c944d1, type: 3}
+      propertyPath: m_text
+      value: Press E to Toggle Door
+      objectReference: {fileID: 0}
     - target: {fileID: 137675943981465636, guid: 1caee3660f74f5c40b12ae7421c944d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -9622,15 +9630,59 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 677477841571522780, guid: 1caee3660f74f5c40b12ae7421c944d1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 731310447408683596, guid: 1caee3660f74f5c40b12ae7421c944d1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.0135
+      objectReference: {fileID: 0}
     - target: {fileID: 891852802195898491, guid: 1caee3660f74f5c40b12ae7421c944d1, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1037536648012155101, guid: 1caee3660f74f5c40b12ae7421c944d1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1100360821150985736, guid: 1caee3660f74f5c40b12ae7421c944d1, type: 3}
+      propertyPath: m_text
+      value: Press E to Toggle Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 1100360821150985736, guid: 1caee3660f74f5c40b12ae7421c944d1, type: 3}
+      propertyPath: m_margin.z
+      value: 1.4145213
+      objectReference: {fileID: 0}
+    - target: {fileID: 1303316737262986472, guid: 1caee3660f74f5c40b12ae7421c944d1, type: 3}
+      propertyPath: m_text
+      value: Press E to Toggle Door
       objectReference: {fileID: 0}
     - target: {fileID: 1509984803108923512, guid: 1caee3660f74f5c40b12ae7421c944d1, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1612839509890141952, guid: 1caee3660f74f5c40b12ae7421c944d1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2193624969458170337, guid: 1caee3660f74f5c40b12ae7421c944d1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.00203
+      objectReference: {fileID: 0}
+    - target: {fileID: 2417732674357879594, guid: 1caee3660f74f5c40b12ae7421c944d1, type: 3}
+      propertyPath: m_text
+      value: Press E to Toggle Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 2417732674357879594, guid: 1caee3660f74f5c40b12ae7421c944d1, type: 3}
+      propertyPath: m_margin.z
+      value: 1.2562143
+      objectReference: {fileID: 0}
+    - target: {fileID: 3755595286761122444, guid: 1caee3660f74f5c40b12ae7421c944d1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.01914
+      objectReference: {fileID: 0}
+    - target: {fileID: 3907149981648549948, guid: 1caee3660f74f5c40b12ae7421c944d1, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -9690,6 +9742,10 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 0.016738435
       objectReference: {fileID: 0}
+    - target: {fileID: 6067319568793867071, guid: 1caee3660f74f5c40b12ae7421c944d1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6166786545426756501, guid: 1caee3660f74f5c40b12ae7421c944d1, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -9702,11 +9758,55 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6866010386736429082, guid: 1caee3660f74f5c40b12ae7421c944d1, type: 3}
+      propertyPath: m_text
+      value: Press E to Toggle Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 6866010386736429082, guid: 1caee3660f74f5c40b12ae7421c944d1, type: 3}
+      propertyPath: m_margin.z
+      value: 1.1372293
+      objectReference: {fileID: 0}
+    - target: {fileID: 7002773381169761450, guid: 1caee3660f74f5c40b12ae7421c944d1, type: 3}
+      propertyPath: m_text
+      value: Press E to Toggle Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 7002773381169761450, guid: 1caee3660f74f5c40b12ae7421c944d1, type: 3}
+      propertyPath: m_margin.z
+      value: 1.4726247
+      objectReference: {fileID: 0}
     - target: {fileID: 7311136496319233686, guid: 1caee3660f74f5c40b12ae7421c944d1, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7354222863980875256, guid: 1caee3660f74f5c40b12ae7421c944d1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7605954559254452619, guid: 1caee3660f74f5c40b12ae7421c944d1, type: 3}
+      propertyPath: m_text
+      value: Press E to Toggle Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 7648716694272073874, guid: 1caee3660f74f5c40b12ae7421c944d1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.03768
+      objectReference: {fileID: 0}
+    - target: {fileID: 7648716694272073874, guid: 1caee3660f74f5c40b12ae7421c944d1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.00857
+      objectReference: {fileID: 0}
+    - target: {fileID: 7998803520377566441, guid: 1caee3660f74f5c40b12ae7421c944d1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.02549
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339030525636499101, guid: 1caee3660f74f5c40b12ae7421c944d1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8635844065579904973, guid: 1caee3660f74f5c40b12ae7421c944d1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8882496177052701005, guid: 1caee3660f74f5c40b12ae7421c944d1, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
