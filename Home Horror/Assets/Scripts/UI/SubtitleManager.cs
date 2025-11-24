@@ -15,8 +15,6 @@ public class SubtitleManager : MonoBehaviour
 {
     public TMP_Text subtitleDisplay;
     public GameObject subtitlePanel;
-    
-    public KeyCode triggerKey = KeyCode.Space;
 
     [Header("Audio")]
     public AudioSource audioSource;
@@ -61,24 +59,6 @@ public class SubtitleManager : MonoBehaviour
         }
         
         
-    }
-
-    void Update()
-    {
-        if (Input.GetKeyDown(triggerKey))
-        {
-           PlayRandomSubtitle();
-        }
-    }
-
-    void PlayRandomSubtitle()
-    {
-        if (subtitleDictionary.Count == 0) return;
-
-        List<string> keys = new List<string>(subtitleDictionary.Keys);
-        string randomKey = keys[Random.Range(0, keys.Count)];
-
-        PlaySubtitle(randomKey);
     }
 
     public void PlaySubtitle(string fileName)

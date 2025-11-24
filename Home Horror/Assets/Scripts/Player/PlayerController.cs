@@ -42,7 +42,6 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
         input = GetComponent<PlayerInput>();
         state = GetComponent<PlayerState>();
         inventory = GetComponent<PlayerInventory>();
@@ -54,6 +53,8 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        if (PauseManager.IsPaused) return;
+        
         UpdateState();
         HandleLateralMovement();
         HandleVerticalMovement();
@@ -96,6 +97,8 @@ public class PlayerController : MonoBehaviour
 
     private void LateUpdate()
     {
+        if (PauseManager.IsPaused) return;
+        
         HandleLook();
     }
 
@@ -260,6 +263,7 @@ public class PlayerController : MonoBehaviour
         if (currentInteractable != null && other.gameObject == currentInteractable.gameObject)
         {
             currentInteractable = null;
+            interactionTriggered = false;
             
             if (other.CompareTag("Pickup"))
             {

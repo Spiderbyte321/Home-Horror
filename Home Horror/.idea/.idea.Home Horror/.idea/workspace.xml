@@ -5,90 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa562036-4b02-4f56-9fd0-665b7258a8bc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/BonganiNoHead (1).controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/BonganiNoHead (1).controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Neutral Idle.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Neutral Idle.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Materials/Bongani/Blu 1.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Materials/Bongani/Blu 1.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Materials/Bongani/Material.001 1.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Materials/Bongani/Material.001 1.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Materials/Bongani/Material.002 1.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Materials/Bongani/Material.002 1.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Materials/Bongani/Pupil 1.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Materials/Bongani/Pupil 1.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Materials/Monsters.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Materials/Monsters/01.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Materials/Monsters/01/Ch30_1001_Diffuse.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Materials/Monsters/01/Ch30_1001_Diffuse.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Materials/Monsters/01/Ch30_1001_Glossiness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Materials/Monsters/01/Ch30_1001_Glossiness.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Materials/Monsters/01/Ch30_1001_Normal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Materials/Monsters/01/Ch30_1001_Normal.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Materials/Monsters/01/Ch30_1001_Specular.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Materials/Monsters/01/Ch30_1001_Specular.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Materials/Monsters/01/Ch30_1002_Diffuse.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Materials/Monsters/01/Ch30_1002_Diffuse.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Materials/Monsters/01/Ch30_1002_Glossiness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Materials/Monsters/01/Ch30_1002_Glossiness.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Materials/Monsters/01/Ch30_1002_Normal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Materials/Monsters/01/Ch30_1002_Normal.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Materials/Monsters/01/Ch30_1002_Specular.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Materials/Monsters/01/Ch30_1002_Specular.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Materials/Monsters/01/Ch30_Body.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Materials/Monsters/01/Ch30_Body.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Materials/Monsters/01/Ch30_Body1.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Materials/Monsters/01/Ch30_Body1.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Materials/Monsters/02.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Materials/Monsters/02/Ch25_1001_Diffuse.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Materials/Monsters/02/Ch25_1001_Diffuse.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Materials/Monsters/02/Ch25_1001_Glossiness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Materials/Monsters/02/Ch25_1001_Glossiness.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Materials/Monsters/02/Ch25_1001_Normal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Materials/Monsters/02/Ch25_1001_Normal.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Materials/Monsters/02/Ch25_1001_Specular.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Materials/Monsters/02/Ch25_1001_Specular.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Materials/Monsters/02/Ch25_1002_Diffuse.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Materials/Monsters/02/Ch25_1002_Diffuse.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Materials/Monsters/02/Ch25_1002_Glossiness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Materials/Monsters/02/Ch25_1002_Glossiness.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Materials/Monsters/02/Ch25_1002_Normal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Materials/Monsters/02/Ch25_1002_Normal.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Materials/Monsters/02/Ch25_1002_Specular.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Materials/Monsters/02/Ch25_1002_Specular.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Materials/Monsters/02/Ch25_Body.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Materials/Monsters/02/Ch25_Body.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Materials/Monsters/02/Ch25_body1.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Materials/Monsters/02/Ch25_body1.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Models/BonganiNoHead (1).fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Models/BonganiNoHead (1).fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Monsters.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Monsters/Animations.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Monsters/Animations/Char2_Idle.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Monsters/Animations/Char2_Idle.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Monsters/Animations/Char2_Walk.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Monsters/Animations/Char2_Walk.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Monsters/Monsters.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Monsters/Monsters/Char2.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Monsters/Monsters/Char2.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Monsters/Monsters/Monster1.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Monsters/Monsters/Monster1.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DegradationSystem/DoorJam.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DegradationSystem/MouldGrowth.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Shaders/Mould.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Shaders/Mould/MouldGrowthShader.shadergraph" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Shaders/Mould/MouldGrowthShader.shadergraph.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Models/Maybe.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Models/Maybe.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PauseManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PauseManager.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Home Horror/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Home Horror/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Mesh.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Mesh.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Picking Up Object.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Picking Up Object.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Font/BasementHorror-DOD4R SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Font/BasementHorror-DOD4R SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Monster/Monsterv2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Monster/Monsterv2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Monster/Moster.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Monster/Moster.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/misc/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/misc/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SanityDecreasers/JumpScare.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SanityDecreasers/JumpScare.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameplayScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameplayScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SanitySystem/SanityEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SanitySystem/SanityEvent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SubtitleManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/SubtitleManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,7 +136,7 @@
       <workItem from="1763928226143" duration="446000" />
       <workItem from="1763957183646" duration="8030000" />
       <workItem from="1763981777738" duration="335000" />
-      <workItem from="1763993059540" duration="3895000" />
+      <workItem from="1763993059540" duration="6864000" />
     </task>
     <servers />
   </component>

@@ -9,7 +9,7 @@ public class SanityEvent : MonoBehaviour
    //triggers event used to decrease player sanity but also to trigger other effects such as loud noise or other screen effects
 
    [SerializeField] private int SanityDamage;
-   [SerializeField] private MeshRenderer renderer;
+   [SerializeField] private SkinnedMeshRenderer renderer;
    [SerializeField] private Collider triggerBox;
    [SerializeField] private SFXController sfxController;
    
@@ -26,7 +26,7 @@ public class SanityEvent : MonoBehaviour
 
    private void TriggerEvent()
    {
-       Debug.Log($"Broadcasting with damage of: {SanityDamage}");
+      Debug.Log($"Broadcasting with damage of: {SanityDamage}");
       OnSanityEvent?.Invoke(SanityDamage);
       renderer.enabled = true;
       triggerBox.enabled = false;

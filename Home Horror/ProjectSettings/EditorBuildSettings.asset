@@ -9,8 +9,11 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenuScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/Scenes/TeleportTest.unity
-    guid: 60f2b833c4f511e489ded91740f9c0c9
+    path: Assets/Scenes/GameplayScene.unity
+    guid: 8dc6f5e4e301aa64eb6466650f137438
+  - enabled: 1
+    path: Assets/Scenes/TutorialScene.unity
+    guid: deb7e1f8bc2ca6a42bbbafcdf6757fb2
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
