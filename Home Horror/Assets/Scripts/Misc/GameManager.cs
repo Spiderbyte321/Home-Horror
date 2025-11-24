@@ -45,18 +45,20 @@ public class GameManager : MonoBehaviour
     public delegate void SystemleftAction(int playerSanityDamage);
 
     public static event SystemleftAction OnSystemLeft;
-
-   
+    
+    public static event Action OnPlayerDied;
 
 
     private void OnEnable()
     {
         PlayerCharacter.OnSanityUpdateAction += HandlePlayerSanityAction;
+        OnPlayerDied += HandlePlayerDeath;
     }
 
     private void OnDisable()
     {
         PlayerCharacter.OnSanityUpdateAction -= HandlePlayerSanityAction;
+        OnPlayerDied -= HandlePlayerDeath;
     }
 
     private void Start()
@@ -155,5 +157,16 @@ public class GameManager : MonoBehaviour
                 break;
                
         }
+    }
+    
+    private void HandlePlayerDeath()
+    {
+        Debug.Log("GAME OVER - Player health reached 0");
+        gameUI.ShowLoseScreen();
+    }
+    
+    public static void TriggerPlayerDeath()
+    {
+        OnPlayerDied?.Invoke();
     }
 }

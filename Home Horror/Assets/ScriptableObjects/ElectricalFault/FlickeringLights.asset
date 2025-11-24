@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c4bd396397b6a445bb35268342826db, type: 3}
   m_Name: FlickeringLights
   m_EditorClassIdentifier: 
-  moneyCost: 10
+  moneyCost: 15
   materialType: Doom
-  materialAmount: 5
+  materialAmount: 2

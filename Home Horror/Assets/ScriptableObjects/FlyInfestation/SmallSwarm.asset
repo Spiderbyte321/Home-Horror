@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 050aee2674960eb4a9f1af7f34cbd75c, type: 3}
   m_Name: SmallSwarm
   m_EditorClassIdentifier: 
-  moneyCost: 15
+  moneyCost: 10
   materialType: Doom
   materialAmount: 1
   swarmDensity: 10

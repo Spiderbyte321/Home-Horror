@@ -6,6 +6,7 @@ public class Teleporter : MonoBehaviour
     [SerializeField] private ScreenFader fader;
     [SerializeField] private GameObject player;
     [SerializeField] private Transform[] spawnPoints;
+    [SerializeField] private bool isBasementDoor = false;
 
     private bool isTeleporting = false;
     private Collider triggerCol;
@@ -39,8 +40,11 @@ public class Teleporter : MonoBehaviour
 
         controller.enabled = true;
 
-        // ★ SAFE NOW: only called once
-        ItemSpawnerManager.Instance.SpawnTodayItems();
+        // Only spawn items when this teleporter is the basement door
+        if (isBasementDoor)
+        {
+            ItemSpawnerManager.Instance.SpawnTodayItems();
+        }
 
         yield return fader.FadeIn();
 
