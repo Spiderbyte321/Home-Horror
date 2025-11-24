@@ -18,6 +18,12 @@ public class FlySwarmHandler : MonoBehaviour
 
     public void SetSwarm(float density, float radius, float chaos)
     {
+        if (swarmSystem == null) return; // prevents scene-change errors
+
+        var emission = swarmSystem.emission;
+        var shape = swarmSystem.shape;
+        var noise = swarmSystem.noise;
+
         emission.rateOverTime = density;
         shape.radius = radius;
         noise.strength = chaos;

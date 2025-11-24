@@ -25,4 +25,9 @@ public class SFXController : MonoBehaviour
         audioSource.clip = SFXManager.instance.GetAudio(scareKeys[Random.Range(0, scareKeys.Length)]);
         audioSource.Play();
     }
+
+    public void stopSFX()
+    {
+        audioSource.Stop();
+    }
 }

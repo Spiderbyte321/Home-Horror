@@ -13,7 +13,7 @@ public class SceneTransition : MonoBehaviour
 
     private IEnumerator Transitioner()
     {
-        yield return new WaitForSeconds(6);
+        yield return new WaitForSeconds(1);
         StartCoroutine(fader.FadeOut());
         SceneManager.LoadScene("GameplayScene");
     }

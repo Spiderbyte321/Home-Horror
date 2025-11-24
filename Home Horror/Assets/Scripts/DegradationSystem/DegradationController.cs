@@ -66,6 +66,7 @@ public class DegradationController : Interactable
                 {
                     inventory.SpendMoney(currentStage.moneyCost);
                     Interact();
+                    sfxController.stopSFX();
                     return true;
                 }
                 break;
@@ -75,6 +76,7 @@ public class DegradationController : Interactable
                 {
                     inventory.UseMaterial(currentStage.materialType, currentStage.materialAmount);
                     Interact();
+                    sfxController.stopSFX();
                     return true;
                 }
                 break;

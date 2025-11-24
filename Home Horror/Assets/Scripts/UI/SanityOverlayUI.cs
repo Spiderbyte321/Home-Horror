@@ -8,6 +8,9 @@ public class SanityOverlayUI : MonoBehaviour
 
     [Header("Sanity Settings")]
     [SerializeField] private float maxOpacity = 0.8f; // opacity when sanity = 0
+    
+    private float currentAlpha = 0f;
+    [SerializeField] private float fadeSpeed = 2f;
 
     private PlayerCharacter player;
 
@@ -29,13 +32,13 @@ public class SanityOverlayUI : MonoBehaviour
 
     private void UpdateSanityOverlay(int sanity)
     {
-        // sanityPercent = 1 when sanity=0, 0 when sanity=100
-        float sanityPercent = Mathf.Clamp01(1f - (sanity / 100f));
+        float sanityPercent = Mathf.Clamp01(1f - sanity / 100f);
+        float targetAlpha = sanityPercent * maxOpacity;
 
-        float newAlpha = sanityPercent * maxOpacity;
+        currentAlpha = Mathf.Lerp(currentAlpha, targetAlpha, Time.deltaTime * fadeSpeed);
 
         Color c = overlayImage.color;
-        c.a = newAlpha;
+        c.a = currentAlpha;
         overlayImage.color = c;
     }
 }
