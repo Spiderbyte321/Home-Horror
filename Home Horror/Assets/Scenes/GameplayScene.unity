@@ -8475,7 +8475,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 11.640991, y: 12.717224}
+  m_AnchoredPosition: {x: 11.640991, y: 12.717163}
   m_SizeDelta: {x: 23.281, y: 25.4344}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1896899086
@@ -9471,16 +9471,16 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3240344235884381812, guid: 75a3852cc70dbb54e86975d3dc25811f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 5160455273751665942, guid: 75a3852cc70dbb54e86975d3dc25811f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 1272441910166508855, guid: 75a3852cc70dbb54e86975d3dc25811f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
     - targetCorrespondingSourceObject: {fileID: 1980953580580805715, guid: 75a3852cc70dbb54e86975d3dc25811f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
     - targetCorrespondingSourceObject: {fileID: 5230808363386315836, guid: 75a3852cc70dbb54e86975d3dc25811f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 5160455273751665942, guid: 75a3852cc70dbb54e86975d3dc25811f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 1272441910166508855, guid: 75a3852cc70dbb54e86975d3dc25811f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 75a3852cc70dbb54e86975d3dc25811f, type: 3}
