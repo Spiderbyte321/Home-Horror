@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: RandomBlackouts
   m_EditorClassIdentifier: 
   moneyCost: 40
-  materialType: Doom
+  materialType: Wires
   materialAmount: 10
