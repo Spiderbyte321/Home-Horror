@@ -4,6 +4,7 @@ using System.Collections.Generic;
 public class ItemSpawnerManager : MonoBehaviour
 {
     public static ItemSpawnerManager Instance;
+    [SerializeField] private LayerMask groundMask;
 
     [Header("Items to spawn")]
     public GameObject[] itemPrefabs;
@@ -61,14 +62,23 @@ public class ItemSpawnerManager : MonoBehaviour
 
             if (area.TryGetSpawnPoint(out Vector3 pos))
             {
-                if (Physics.Raycast(pos + Vector3.up * 2f, Vector3.down, out RaycastHit hit, 10f))
-                {
-                    pos = hit.point;
-                }
-                else
-                {
-                    continue;
-                }
+               // Start slightly above the spawn area but INSIDE the house
+Vector3 rayStart = pos + Vector3.up * 0.5f;
+
+if (Physics.Raycast(pos + Vector3.up * 2f, Vector3.down, out RaycastHit hit, 10f, groundMask))
+{
+    // Reject walls or anything not flat enough to be a floor
+    if (hit.normal.y < 0.95f)
+        continue;
+
+    pos = hit.point; // Valid floor
+}
+else
+{
+    continue;
+}
+
+
 
                 GameObject prefab = itemPrefabs[Random.Range(0, itemPrefabs.Length)];
                 GameObject obj = Instantiate(prefab, pos, Quaternion.identity);

@@ -36,10 +36,12 @@ public class PlayerController : MonoBehaviour
     private GameUI gameUI;
     public GameObject inventoryPanel;
     public GameObject inventoryButton;
+    
+    [SerializeField] private Animator animator;
+    private bool interactionTriggered = false;
 
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
         input = GetComponent<PlayerInput>();
         state = GetComponent<PlayerState>();
         inventory = GetComponent<PlayerInventory>();
@@ -51,6 +53,8 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        if (PauseManager.IsPaused) return;
+        
         UpdateState();
         HandleLateralMovement();
         HandleVerticalMovement();
@@ -58,6 +62,23 @@ public class PlayerController : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.Tab))
             ShowInventory();
+        
+        UpdateAnimatorParameters();
+    }
+    
+    private void UpdateAnimatorParameters()
+    {
+        // Walking animation
+        float moveAmount = input.MoveInput.magnitude;
+        animator.SetFloat("MoveSpeed", moveAmount);
+
+        // Interaction animation
+        animator.SetBool("IsInteracting", interactionTriggered);
+    }
+    
+    public void EndInteractionAnimation()
+    {
+        interactionTriggered = false;
     }
 
     private void ShowInventory()
@@ -76,6 +97,8 @@ public class PlayerController : MonoBehaviour
 
     private void LateUpdate()
     {
+        if (PauseManager.IsPaused) return;
+        
         HandleLook();
     }
 
@@ -171,6 +194,7 @@ public class PlayerController : MonoBehaviour
     {
         if (input.InteractPressed && currentInteractable != null && currentInteractable.CompareTag("Pickup"))
         {
+            interactionTriggered = true;
             currentInteractable.Interact();
             gameUI.HideMaterialInfoPopup();
         }
@@ -179,17 +203,23 @@ public class PlayerController : MonoBehaviour
         {
             bool repaired = degradation.TryRepairSystem(inventory, DegradationController.RepairMethod.Money);
             if (!repaired) Debug.Log("Not enough money.");
+            
+            interactionTriggered = true;
         }
 
         if (input.RepairMaterialsPressed && currentInteractable is DegradationController degradation2 && currentInteractable.CompareTag("RepairBox"))
         {
             bool repaired = degradation2.TryRepairSystem(inventory, DegradationController.RepairMethod.Material);
             if (!repaired) Debug.Log("Not enough resources.");
+            
+            interactionTriggered = true;
         }
 
         if(input.InteractPressed && currentInteractable is not null)
         {
             currentInteractable.Interact();
+            
+            interactionTriggered = true;
         }
     }
 
@@ -233,6 +263,7 @@ public class PlayerController : MonoBehaviour
         if (currentInteractable != null && other.gameObject == currentInteractable.gameObject)
         {
             currentInteractable = null;
+            interactionTriggered = false;
             
             if (other.CompareTag("Pickup"))
             {
