@@ -17,7 +17,6 @@ public class MonsterV1 : AbstractMonster
             return;
 
         revealed = true;
-        SFXManager.instance.playglobalJumpScare("scare2");
         StartCoroutine(disapearRoutine());
     }
 

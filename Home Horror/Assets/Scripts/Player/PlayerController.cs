@@ -168,12 +168,7 @@ public class PlayerController : MonoBehaviour
             if (!repaired) Debug.Log("Not enough resources.");
         }
 
-        if (input.InteractPressed&&currentInteractable is DoorController)
-        {
-            currentInteractable.Interact();
-        }
-
-        if (input.InteractPressed && currentInteractable is DayEndController)
+        if(input.InteractPressed && currentInteractable is not null)
         {
             currentInteractable.Interact();
         }

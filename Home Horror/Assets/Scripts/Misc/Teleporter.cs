@@ -37,7 +37,7 @@ public class Teleporter : MonoBehaviour
 
         Transform randomSpawn = spawnPoints[Random.Range(0, spawnPoints.Length)];
         player.transform.position = randomSpawn.position;
-
+        PlayerTeleported();
         controller.enabled = true;
 
         yield return fader.FadeIn();
@@ -47,5 +47,11 @@ public class Teleporter : MonoBehaviour
 
         triggerCol.enabled = true;
         isTeleporting = false;
+    }
+
+
+    protected virtual void PlayerTeleported()
+    {
+        
     }
 }

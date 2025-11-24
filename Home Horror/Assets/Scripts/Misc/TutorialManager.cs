@@ -6,11 +6,22 @@ public class TutorialManager : MonoBehaviour
 {
         [SerializeField] private TutorialCollisionBox[] playerTriggerColisions;
 
+        [SerializeField] private GameObject wallSegment;
+        [SerializeField] private GameObject basementDoor;
+        [SerializeField] private GameObject[] basementJumpscares;
         private Dictionary<TutorialCollisionBox, bool> CheckPlayerCollisions = new Dictionary<TutorialCollisionBox, bool>();
 
         public delegate void OnPlayerExplored();
 
         public static event OnPlayerExplored PlayerExploredAction;
+
+        public delegate void OnPLayerAwoken();
+
+        public static event OnPLayerAwoken PlayerAwokenAction;
+
+        public delegate void OnPLayerEnteredBasement();
+
+        public static event OnPLayerEnteredBasement PlayerEnteredBasementAction;
 
         private void Awake()
         {
@@ -25,6 +36,13 @@ public class TutorialManager : MonoBehaviour
         private void OnEnable()
         {
                 TutorialCollisionBox.TutorialBoxTriggeredAction += PlayerEplored;
+                TutorialBasementDoor.TutorialBasementDoorAction += InformGame;
+        }
+
+        private void OnDisable()
+        {
+                TutorialCollisionBox.TutorialBoxTriggeredAction -= PlayerEplored;
+                TutorialBasementDoor.TutorialBasementDoorAction -= InformGame;
         }
 
 
@@ -39,5 +57,27 @@ public class TutorialManager : MonoBehaviour
                 }
                 
                 PlayerExploredAction?.Invoke();
+        }
+
+        private void InformGame()
+        { 
+                PlayerEnteredBasementAction?.Invoke();
+        }
+
+
+        private void RevealBasementDoor()//Trigger event once we fade back in
+        {
+                //Play sound effect
+                wallSegment.SetActive(false);
+                basementDoor.SetActive(true);
+                PlayerAwokenAction?.Invoke();
+        }
+
+        private void PrimeBasementJumpScares()
+        {
+                foreach (GameObject scare in basementJumpscares)
+                {
+                        scare.SetActive(true);
+                }
         }
 }

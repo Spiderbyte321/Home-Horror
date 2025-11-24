@@ -12,7 +12,13 @@ public class DayEndController : Interactable
 
     public override void Interact()
     {
+        Debug.Log("Interacted with bed");
         OnBedInteracted?.Invoke();
+    }
+
+    private void Awake()
+    {
+        prompt.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)
