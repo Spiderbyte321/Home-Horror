@@ -60,8 +60,6 @@ public class GameUI : MonoBehaviour
         materialsActivePopup = Instantiate(materialsPopup, spawnPoint.position, Quaternion.identity);
         materialsActivePopup.transform.SetParent(GameObject.Find("Canvas").transform, worldPositionStays: true); // Place on canvas
         
-        Debug.Log(materialsActivePopup.name);
-        
         // Access MaterialPopupUI script inside the instantiated popup
         var popupUI = materialsActivePopup.GetComponent<MaterialInfoPopup>();
         if (popupUI != null)

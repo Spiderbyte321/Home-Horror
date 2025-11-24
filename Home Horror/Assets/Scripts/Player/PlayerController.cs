@@ -168,7 +168,7 @@ public class PlayerController : MonoBehaviour
             if (!repaired) Debug.Log("Not enough resources.");
         }
 
-        if (input.InteractPressed&&currentInteractable is DoorController)
+        if(input.InteractPressed && currentInteractable is not null)
         {
             currentInteractable.Interact();
         }
@@ -189,8 +189,6 @@ public class PlayerController : MonoBehaviour
                 int amount = materialController.MaterialAmount;
 
                 gameUI.ShowMaterialInfoPopup(name, amount);
-                
-                Debug.Log("Pickup Triggered");
             }
 
             if (other.CompareTag("RepairBox") && other.TryGetComponent(out DegradationController degradation))
