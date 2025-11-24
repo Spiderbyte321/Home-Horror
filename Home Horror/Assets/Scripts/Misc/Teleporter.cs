@@ -5,7 +5,10 @@ public class Teleporter : MonoBehaviour
 {
     [SerializeField] private ScreenFader fader;
     [SerializeField] private GameObject player;
+
+    // These are the spawnpoints *this teleporter* can choose from
     [SerializeField] private Transform[] spawnPoints;
+
     [SerializeField] private bool isBasementDoor = false;
 
     private bool isTeleporting = false;
@@ -18,7 +21,8 @@ public class Teleporter : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!other.CompareTag("Player") || isTeleporting) return;
+        if (!other.CompareTag("Player") || isTeleporting)
+            return;
 
         StartCoroutine(TeleportRoutine());
     }
@@ -27,28 +31,42 @@ public class Teleporter : MonoBehaviour
     {
         isTeleporting = true;
 
-        // Disable trigger so it can't fire twice
+        // Prevent double triggering
         triggerCol.enabled = false;
 
+        // Fade out
         yield return fader.FadeOut();
 
+        // Disable controller before moving
         var controller = player.GetComponent<CharacterController>();
         controller.enabled = false;
 
+        // Pick random spawnpoint
         Transform randomSpawn = spawnPoints[Random.Range(0, spawnPoints.Length)];
+
+        // Tell StaircaseManager which staircase to enable
+        var owner = StaircaseManager.Instance.FindOwnerOf(randomSpawn);
+        if (owner != null)
+        {
+            StaircaseManager.Instance.ActivateOnly(owner);
+        }
+
+        // Move player
         player.transform.position = randomSpawn.position;
 
+        // Re-enable controller
         controller.enabled = true;
 
-        // Only spawn items when this teleporter is the basement door
+        // Basement door spawns items
         if (isBasementDoor)
         {
             ItemSpawnerManager.Instance.SpawnTodayItems();
         }
 
+        // Fade back in
         yield return fader.FadeIn();
 
-        // Small delay before enabling trigger again
+        // Small buffer before allowing retrigger
         yield return new WaitForSeconds(0.25f);
 
         triggerCol.enabled = true;
