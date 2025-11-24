@@ -10,14 +10,20 @@ public class DoorController : Interactable
     private bool isPrompterActive;
     private void OnTriggerEnter(Collider other)
     {
-        togglePromptVisibility();
-
-        if (other.CompareTag("Enemy")) ;
+        if(other.CompareTag("Player"))
+            togglePromptVisibility();
+        
+        if(other.CompareTag("Enemy"))
+            toggleDoorState();
     }
 
     protected virtual void OnTriggerExit(Collider other)
     {
-        togglePromptVisibility();
+        if(other.CompareTag("Player"))
+            togglePromptVisibility();
+        
+        if(other.CompareTag("Enemy"))
+            toggleDoorState();
     }
 
     private void togglePromptVisibility()

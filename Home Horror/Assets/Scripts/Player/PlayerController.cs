@@ -172,6 +172,11 @@ public class PlayerController : MonoBehaviour
         {
             currentInteractable.Interact();
         }
+
+        if (input.InteractPressed && currentInteractable is DayEndController)
+        {
+            currentInteractable.Interact();
+        }
     }
 
     private void OnTriggerEnter(Collider other)

@@ -40,7 +40,7 @@ public class MonsterV2 : AbstractMonster
 
         revealed = true;
         StartCoroutine(wander());
-        StartCoroutine(taunt());
+        //StartCoroutine(taunt());
     }
 
     private IEnumerator wander()

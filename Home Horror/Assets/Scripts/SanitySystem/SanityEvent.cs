@@ -36,7 +36,6 @@ public class SanityEvent : MonoBehaviour
 
    private void OnTriggerEnter(Collider other)
    {
-     Debug.Log("Triggered");
       if(!other.CompareTag("Player")) 
          return;
       
