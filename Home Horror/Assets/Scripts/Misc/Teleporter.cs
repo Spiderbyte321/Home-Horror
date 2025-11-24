@@ -40,12 +40,6 @@ public class Teleporter : MonoBehaviour
 
         controller.enabled = true;
 
-        // Only spawn items when this teleporter is the basement door
-        if (isBasementDoor)
-        {
-            ItemSpawnerManager.Instance.SpawnTodayItems();
-        }
-
         yield return fader.FadeIn();
 
         // Small delay before enabling trigger again

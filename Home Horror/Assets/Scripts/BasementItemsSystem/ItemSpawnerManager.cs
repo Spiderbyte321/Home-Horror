@@ -1,5 +1,7 @@
+using System;
 using UnityEngine;
 using System.Collections.Generic;
+using Random = UnityEngine.Random;
 
 public class ItemSpawnerManager : MonoBehaviour
 {
@@ -36,6 +38,16 @@ public class ItemSpawnerManager : MonoBehaviour
         currentItemCount = baseItemCount;
     }
 
+    private void OnEnable()
+    {
+        GameManager.OnNightBegan += SpawnTodayItems;
+    }
+
+    private void OnDisable()
+    {
+        GameManager.OnNightBegan -= SpawnTodayItems;
+    }
+
     private void Start()
     {
         areas = FindObjectsOfType<RandomSpawnArea>();
@@ -43,7 +55,7 @@ public class ItemSpawnerManager : MonoBehaviour
             Debug.LogError("[ItemSpawnerManager] NO RandomSpawnAreas found in the scene!");
     }
 
-   public void SpawnTodayItems()
+   public void SpawnTodayItems(int playerCurrentSanity)
 {
     if (isSpawning) return;
     isSpawning = true;
@@ -67,8 +79,7 @@ public class ItemSpawnerManager : MonoBehaviour
         {
             GameObject prefab = itemPrefabs[Random.Range(0, itemPrefabs.Length)];
             GameObject obj = Instantiate(prefab, pos, Quaternion.identity);
-
-            obj.tag = "SpawnedItem";
+            
             spawnedItems.Add(obj);
 
             spawned++;

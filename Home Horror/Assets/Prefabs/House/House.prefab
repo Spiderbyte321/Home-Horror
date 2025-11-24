@@ -1063,6 +1063,7 @@ GameObject:
   - component: {fileID: 1565775931640578037}
   - component: {fileID: 6419108109379395216}
   - component: {fileID: 2617625135190430793}
+  - component: {fileID: 6257923656012576366}
   m_Layer: 12
   m_Name: Door2
   m_TagString: Untagged
@@ -1200,6 +1201,26 @@ MonoBehaviour:
   secondPrompter: {fileID: 8339030525636499101}
   renderer: {fileID: 8223520282595825196}
   collisionBox: {fileID: 1565775931640578037}
+--- !u!114 &6257923656012576366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1612839509890141952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_OverrideArea: 0
+  m_Area: 0
+  m_OverrideGenerateLinks: 0
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 1
+  m_ApplyToChildren: 1
+  m_AffectedAgents: ffffffff
 --- !u!1 &1851548681226619246
 GameObject:
   m_ObjectHideFlags: 0
@@ -2130,6 +2151,7 @@ GameObject:
   - component: {fileID: 7317556161140596206}
   - component: {fileID: 7009858440789966971}
   - component: {fileID: 613686158825248650}
+  - component: {fileID: 8120471580155108779}
   m_Layer: 12
   m_Name: Door1
   m_TagString: Untagged
@@ -2267,6 +2289,26 @@ MonoBehaviour:
   secondPrompter: {fileID: 8882496177052701005}
   renderer: {fileID: 4020343049793784618}
   collisionBox: {fileID: 7317556161140596206}
+--- !u!114 &8120471580155108779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5888708163147786014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_OverrideArea: 0
+  m_Area: 0
+  m_OverrideGenerateLinks: 0
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 1
+  m_ApplyToChildren: 1
+  m_AffectedAgents: ffffffff
 --- !u!1 &5966334375461768553
 GameObject:
   m_ObjectHideFlags: 0
@@ -8519,6 +8561,7 @@ GameObject:
   - component: {fileID: 6824396603462866469}
   - component: {fileID: 7597842880224504259}
   - component: {fileID: 7873264663337988098}
+  - component: {fileID: 6189391635010513394}
   m_Layer: 12
   m_Name: Door3
   m_TagString: Untagged
@@ -8656,6 +8699,26 @@ MonoBehaviour:
   secondPrompter: {fileID: 3907149981648549948}
   renderer: {fileID: 2837030046577570089}
   collisionBox: {fileID: 6824396603462866469}
+--- !u!114 &6189391635010513394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8635844065579904973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_OverrideArea: 0
+  m_Area: 0
+  m_OverrideGenerateLinks: 0
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 1
+  m_ApplyToChildren: 1
+  m_AffectedAgents: ffffffff
 --- !u!1 &8744925536835785361
 GameObject:
   m_ObjectHideFlags: 0
